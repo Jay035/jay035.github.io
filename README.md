@@ -19,3 +19,6 @@ https://jay035.github.io/stat-preview/
 
 Testimonials
 https://jay035.github.io/Testimonials/
+
+profile-card
+https://jay035.github.io/profile-card/
