@@ -62,7 +62,7 @@ body{
 @media (min-width:360px) and (max-width:380px){
     .background{
         position: absolute;
-        top: 13.6%;
+        top: 10%;
         left:auto ;
         right:auto;
         width: 87%;
