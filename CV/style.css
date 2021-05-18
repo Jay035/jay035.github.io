@@ -1,6 +1,8 @@
 body{
     margin: 0;
     padding:0 ;
+    font-family: 'Open Sans', sans-serif;
+    word-spacing: 2px;
 }
 header{
     background-color: rgb(150, 85, 36);
