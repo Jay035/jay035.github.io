@@ -1,0 +1,97 @@
+body{
+  margin: 0;
+  overflow-y: scroll;
+}
+.top {
+  background-color: whitesmoke;
+  height: 100vh;
+  width: 100%;
+}
+
+nav {
+  padding: 1em 1em;
+}
+
+.container-fluid{
+  height: 4rem;
+}
+#logo{
+  width: 2rem;
+}
+.navbar-toggler{
+  height: 4rem;
+  border: none;
+  
+}
+.navbar-toggler-icon{
+  height: 2.5rem;
+  width:2.5rem;
+}
+.nav-item > a{
+  color:  #3944bc;
+}
+.horizontal-rule{
+  margin-top: 0;
+}
+#home-hr{
+  height: 3px;
+  color:  #3944bc;
+}
+button#btn-link{
+  margin: 2em auto;
+  padding:.5em 1em ;
+  background-color:  #3944bc;
+  border: none;
+  width: 20rem;
+}
+button#btn-link a{
+  color: white;
+  font-weight: bolder;
+  
+}
+.links{
+  text-align: right;
+}
+
+a{
+  text-decoration: none;
+  color: #3944bc;
+  padding-left: .5em;
+  font-weight: bolder;
+}
+*/
+/*footer-area*/
+.footer{
+  background-color: #3944bc;
+  height: 68vh;
+  color: whitesmoke;
+  padding:.6em ;
+  margin-top: 22em;
+  position: absolute;
+}
+section.left{
+  float: left;
+}
+section.right{
+  line-height: 1.7;
+}
+.footer a{
+  color: whitesmoke;
+  text-decoration: underline rgb(161, 161, 192);
+}
+.footer h3{
+  font-size: 17px;
+}
+.bottom p{
+  padding-left: 1.2em;
+}
+
+#profile {
+  width: 5rem;
+  height: 5.5rem;
+  margin: .5em 1em;
+}
+.footer-img {
+  width: 2rem;
+}
+

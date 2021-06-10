@@ -1,0 +1,7 @@
+{
+  "run": {
+    "type": "file",
+    "file": "Portfolio/CodexJay proto/about.html",
+    "ignoreCurrent": false
+  }
+}
