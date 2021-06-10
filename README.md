@@ -13,7 +13,7 @@ Calculator
 https://jay035.github.io/Calculator/
 
 Google Homepage task by Zuri
-https://jay035.github.io//Google%20Homepage/
+https://jay035.github.io/Google%20Homepage/
 
 Responsive Design task by Zuri
 https://jay035.github.io/RD/
