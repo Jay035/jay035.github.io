@@ -3,6 +3,7 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+
 .body{
     display: grid;
     grid-template-columns: 22% auto;
@@ -220,12 +221,32 @@ footer{
 .support{
     padding-top: 1.7rem;
 }
-.container{
-    height: 22rem;
+.requests-table{
+    height: 26.5rem!important;
 }
+.container{
+    height: 27rem;
+    width: 32.5rem;
+}
+
 .contacts-table,.requests-table{
     height: 22rem;
     overflow-y: scroll;
+}
+.chats::-webkit-scrollbar,.contacts-table::-webkit-scrollbar,.requests-table::-webkit-scrollbar{
+    width: 10px;
+}
+.chats::-webkit-scrollbar-track,.contacts-table::-webkit-scrollbar-track,.requests-table::-webkit-scrollbar-track{
+    background: #f1f1f1;
+    box-shadow: inset 0 0 5px ;
+    border-radius: 15px;
+}
+.chats::-webkit-scrollbar-thumb,.contacts-table::-webkit-scrollbar-thumb,.requests-table::-webkit-scrollbar-thumb{
+    background: #888;
+    border-radius: 15px;
+}
+.chats::-webkit-scrollbar-thumb:hover,.contacts-table::-webkit-scrollbar-thumb:hover,.requests-table::-webkit-scrollbar-thumb:hover{
+    background: #555;
 }
 .contact-lists,.checkup-lists,.request-list{
    padding: .5rem;
@@ -274,8 +295,7 @@ footer{
     width: 12rem;
 }
 .container .title{
-    padding-top: .8rem;
-    padding-bottom: 0;
+    padding-top: .6rem;
 }
 .admin{
    display: flex;
@@ -284,4 +304,61 @@ footer{
     margin-right: .5rem;
     position: relative;
     bottom: .5em;
+}
+.chats{
+    overflow-y: scroll;
+}
+/* admin-chat section */
+.admin-chat{
+    width: 20rem;
+    margin: 1em 0;
+}
+.admin-chat .message{
+    background-color: #303A5F;
+    color: #fff;
+    border-radius: 10px;
+    margin-left: 2.5em;
+    word-wrap: break-word;
+    padding: .8rem 1rem .8rem .5rem;
+    
+}
+.admin-chat p{
+    margin-left: 4em;
+    margin-top: .3em;
+}
+.doctor-chat{
+    width: 20rem;
+    margin: 1em .5em 1em auto;
+    padding-bottom: 2rem;
+}
+.doctor-chat .message{
+    background-color: #EAEBEF;
+    border-radius: 10px;
+    padding: .8rem 0 .8rem .5rem;
+    margin-right: 2.5em;
+}
+.chats .message h5{
+    font-weight: 400;
+    font-size: 18px;
+}
+.doctor-chat .tym{
+    margin-right: 4em;
+
+}
+.doctor-chat .tym{
+    float: right;
+    padding-top: .5rem;
+}
+.doctor-chat svg,#chat-input svg{
+    float: right;
+}
+#chat-input{
+    padding: .5rem .5rem;
+}
+input{
+    border: none;
+    font-size: 18px;
+    margin-left: 1em;
+    width: 22rem;
+    outline: none;
 }
