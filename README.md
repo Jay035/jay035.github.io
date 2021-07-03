@@ -28,4 +28,7 @@ stat-preview
 https://jay035.github.io/stat-preview/
 
 ECare
-https://jay035.github.io/ECare/
+https://jay035.github.io/ECare/Landing%20page/
+
+ECare doctors dashboard
+https://jay035.github.io/ECare/Doctors%20Dashboard/
