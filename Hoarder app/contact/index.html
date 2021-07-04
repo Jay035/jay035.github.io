@@ -10,15 +10,22 @@
 <body>
     <!-- Navbar -->
     <header>
-        <nav>
-           <img src="../img/Group 428.png" alt=""> 
-           <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#About">About</a></li>
-                <li><a href="#Contact">Contact</a></li>
-                <li><a href="#FAQ">FAQ</a></li>
+        <nav id="nav">
+            <img src="../img/Group 428.png" alt="">
+            <ul id="navLinks">
+               <li class="nav-item"><a href="#">Home</a></li>
+               <li class="nav-item"><a href="#About">About</a></li>
+               <li class="nav-item"><a href="#Contact">Contact</a></li>
+               <li class="nav-item"><a href="#FAQ">FAQ</a></li>
+               <button class="download">DOWNLOAD APP</button>
             </ul>
-            <button class="download">DOWNLOAD APP</button>
+               <button id="desktop-btn" class="download">DOWNLOAD APP</button>
+            
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </nav>
     </header>
 
@@ -61,7 +68,7 @@
                 </div>
                 <div class="box">
                     <h5>Email</h5>
-                    <p><i class="fa fa-envelope-o" aria-hidden="true"></i>  <span style="margin-left: 8px;">support@hoardr.com</span></p>
+                   <a href=""> <p><i class="fa fa-envelope-o" aria-hidden="true"></i>  <span style="margin-left: 8px;">support@hoardr.com</span></p></a>
                 </div>
             </div>
 
@@ -112,13 +119,30 @@
                 <a href="#"> Partnership and enquiries</a>
                 <a href="#"> support@hoadr.com</a>
                 <div class="socials">
-                    <img class="twitter" src="../img/twitter.png" alt="">
-                    <img class="fb" src="../img/facebook.png" alt="">
-                    <img class="ig" src="../img/ig.png" alt="">
+                   <a href="#"> <img class="twitter" src="../img/twitter.png" alt=""></a>
+                   <a href=""> <img class="fb" src="../img/facebook.png" alt=""></a>
+                   <a href=""> <img class="ig" src="../img/ig.png" alt=""></a>
                 </div>
             </nav>
         </section>
+        <div id="mobile-socials" class="socials">
+            <a href="#"> <img class="twitter" src="../img/twitter.png" alt=""></a>
+            <a href=""> <img class="fb" src="../img/facebook.png" alt=""></a>
+            <a href=""> <img class="ig" src="../img/ig.png" alt=""></a>
+         </div>
     </footer>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.getElementById('navLinks');
+
+        hamburger.addEventListener('click', mobileMenu);
+
+        function mobileMenu(){
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        }
+    </script>
      
 </body>
 </html>

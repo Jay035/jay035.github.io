@@ -81,77 +81,104 @@ header {
     height: 10vh;
 }
 
-header nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    left: 0;
-    top: 0;
-    margin-top: 40px;
-    width: 100%;
-    z-index: 1;
+nav img{
+  padding: 16px 24px;
+  border: none;
+  margin-left: 100px;
+  width: 14%;
+}
+#nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow-x: hidden;
+  left: 0;
+  top: 0;
+  margin-top: 40px;
+  width: 100%;
+  z-index: 1;
+}
+#navLinks{
+  display: flex;
+  margin-left: -70px;
+  transition: 0.3s;
+}
+#navLinks a{
+  color: #4b4b58;
+}
+nav button.download{
+  display: none;
+}
+#desktop-btn{
+  width: 25%;
+  display: block!important;
+}
+#navLinks.active{
+  left: 0;
 }
 
-header nav .nav-links {
-    display: flex;
-    margin-left: -70px;
+header nav #nav-links li {
+  display: inline-block;
+  padding: 0px 20px;
+  font-family: 'Mulish', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  color: #4b4b58;
+  letter-spacing: 1px;
+}
+.nav-item a:after{
+  content: "";
+  display: block;
+  background-color: #ff3c78;
+  height: 2px;
+  width: 0;
+  left: 80;
+  bottom: 0;
+  transition: 0.3s;
 }
 
-header nav .nav-links li {
-    display: inline-block;
-    padding: 0px 20px;
-    font-family: 'Mulish', sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    color: #4b4b58;
-    letter-spacing: 1px;
-}
-
-header nav .nav-links li a{
-    color: #4b4b58;
-}
-
-.nav-links li a:after{
-    content: "";
-    display: block;
-    background-color: #ff3c78;
-    height: 2px;
-    width: 0;
-    left: 80;
-    bottom: 0;
-    transition: 0.3s;
-}
-
-.nav-links li a:hover:after{
-    width: 100%;
-    left: 0;
+.nav-item a:hover:after{
+  width: 100%;
+  left: 0;
 }
 
 .download {
-    background-color: #212121;
-    color: #fff;
-    border-radius: 4px;
-    padding: 16px 24px;
-    margin-right: 143.5px;
-    border: none;
-    transition: all 0.3s ease 0s;
+  background-color: #212121;
+  color: #fff;
+  border-radius: 4px;
+  padding: 16px 24px;
+  margin-right: 143.5px;
+  border: none;
+  transition: all 0.3s ease 0s;
 }
 
 .download:hover {
-    background-color: #ff3c78; 
-    transition: all 0.3s ease 0s;
-    color: #fff;
-    transform: scale(0.98);
+  background-color: #ff3c78; 
+  transition: all 0.3s ease 0s;
+  color: #fff;
+  transform: scale(0.98);
 }
 
-nav img{
-    padding: 16px 24px;
-    border: none;
-    margin-left: 100px;
-    width: 14%;
+.nav-item{
+  margin: 1.5rem 1em;
 }
+.hamburger{
+  display: none;
 
+}
+.bar{
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #101010;
+}
+#desktop-nav{
+  display: none;
+}
 /* Showcase */
 .showcase {
   height: 400px;
@@ -237,7 +264,7 @@ span{
   width: 100%;
   margin-left: -10px;
   height: 200px;
-  padding: 3px 10px;
+  padding: 13px 10px;
   font-size: 16px;
   resize: none;
   outline: none;
@@ -333,8 +360,14 @@ form{
 footer{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-evenly;
-    padding: 180px 60px;
+    padding: 180px 60px 70px;
+}
+footer .subs{
+  width: 100%;
+  text-align: center;
+  padding-bottom: 1rem;
 }
 
 .email-btn{
@@ -343,6 +376,7 @@ footer{
 
 footer section:first-child div.email-btn{
     display: flex;
+    justify-content: center;
 }
 
 footer section:first-child input{
@@ -404,7 +438,16 @@ footer section nav a:hover{
     transform: translateX(10px);
     color: #ff3c78;
 }
-
+.socials{
+  display: flex;
+  justify-content: space-between;
+}
+#mobile-socials{
+  display: none;
+}
+.socials a{
+  margin: 0;
+}
 .socials img{
     border: solid;
     padding: 0.5em;
@@ -412,6 +455,7 @@ footer section nav a:hover{
     border-radius: 50%;
     border: none;
     margin: 0 6px;
+    width: 35%;
 }
 .mobile{
     display: none;
@@ -420,6 +464,12 @@ footer section nav a:hover{
     display: none;
 }
 
+@media (max-width: 450px) {
+  .com{
+    width: 80%;
+    text-align: center;
+  }
+}
 
 /* Tablets and under */
 @media (max-width: 900px) {
@@ -431,9 +481,51 @@ footer section nav a:hover{
       grid-template-rows: 1fr;
     }
   
-    header nav .nav-links,
-    button{
-        display: none;
+    header nav #nav-links {
+      display: flex;
+      margin-left: -70px;
+  }
+    #navLinks{
+      padding-bottom: 3rem;
+      position: fixed;
+      left: -100%;
+      top: 5rem;
+      width: 100%;
+      text-align: center;
+      justify-content: space-between;
+      flex-direction: column;
+      background-color: #fff;
+      z-index: 9999;
+    }
+    #navLinks.active {
+      left: 10%;
+  }
+    nav button.download{
+      display: block!important;
+      width: 40%;
+      margin: 0 auto;
+    }
+    #desktop-btn{
+      display: none!important;
+    }
+    .hamburger{
+      display: block;
+      margin-right: 1em;
+      cursor: pointer;
+    }
+    .hamburger.active .bar:nth-child(2) {
+      opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+    #navLinks li{
+      width: 20%;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .showcase {
@@ -460,7 +552,7 @@ footer section nav a:hover{
     }
 
     header nav img{
-        width: 25%;
+        width: 19%;
         margin: 0 -15px;   
     }
 
@@ -526,12 +618,21 @@ footer section nav a:hover{
 
     .contact .center h2{
         font-size: 28px;
-        width: ;
+
         font-weight: 900;
     }
 
-    footer{
-        display: none;
+    .socials{
+      display: none;
+    }
+    #mobile-socials{
+      display: flex;
+      justify-content: center;
+      width: 200%;
+      margin: 1em auto;
+    }
+    .socials img{
+      width: 40%;
     }
 
   }
@@ -543,6 +644,34 @@ footer section nav a:hover{
     }
   } */
 
+/* Ipad and above */
+  @media (min-width: 768px){
+    #navLinks{
+      margin-left: 0;
+    }
+    #desktop-nav{
+      display: none;
+    }
+    h5{
+      margin: .8em auto 1.2em ;
+    }
+    footer{
+      display: grid;
+      grid-template-columns: auto auto auto;
+      grid-gap: 30px;
+      align-items: flex-start;
+      
+    }
+    footer .subs {
+      text-align: left;
+  }
+
+  }
+  /* Above Tablets */
+  @media (min-width: 900px){
+    
+    
+  }
   @media (min-width: 1440px){
     .showcase .gallery-container{
             width: 103%;
