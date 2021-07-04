@@ -195,10 +195,6 @@ header nav #nav-links li {
     color: #4B4B58;
 }
 
-span{
-  font-weight: 900;
-}
-
 .showcase p {
   font-family: 'Mulish', sans-serif;
   font-style: normal;
@@ -361,7 +357,7 @@ footer{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-around;
     padding: 180px 60px 70px;
 }
 footer .subs{
@@ -464,12 +460,6 @@ footer section nav a:hover{
     display: none;
 }
 
-@media (max-width: 450px) {
-  .com{
-    width: 80%;
-    text-align: center;
-  }
-}
 
 /* Tablets and under */
 @media (max-width: 900px) {
@@ -621,6 +611,7 @@ footer section nav a:hover{
 
         font-weight: 900;
     }
+    
 
     .socials{
       display: none;
