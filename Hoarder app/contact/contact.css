@@ -466,6 +466,15 @@ footer section nav a:hover{
     grid-template-columns: auto auto;
     grid-gap: 30px;
   }
+  .desktop-com{
+    display: none;
+  }
+  
+}
+@media (min-width: 450px) {
+  #bottom-mobile{
+    display: none;
+  }
   
 }
 
@@ -494,6 +503,9 @@ footer section nav a:hover{
       flex-direction: column;
       background-color: #000;
       z-index: 9999;
+    }
+    #navLinks a{
+      color: white;
     }
     #navLinks.active {
       left: 10%;
@@ -620,9 +632,9 @@ footer section nav a:hover{
         font-weight: 900;
     }
     
-    #bottom-mobile{
+    /* #bottom-mobile{
       display: none;
-    }
+    } */
     .socials{
       display: none;
     }
