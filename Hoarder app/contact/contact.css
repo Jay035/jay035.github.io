@@ -110,7 +110,7 @@ nav button.download{
   display: none;
 }
 #desktop-btn{
-  width: 25%;
+  width: 15%;
   display: block!important;
 }
 #navLinks.active{
@@ -492,7 +492,7 @@ footer section nav a:hover{
       text-align: center;
       justify-content: space-between;
       flex-direction: column;
-      background-color: #fff;
+      background-color: #000;
       z-index: 9999;
     }
     #navLinks.active {
