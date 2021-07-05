@@ -45,6 +45,11 @@ nav ul{
     list-style-type: none;
 }
 
+nav a:hover, .footer a:hover{
+    text-decoration: underline #fff;
+    font-weight: bold;
+}
+
 /* hero-section styles */
 .hero-section{
     margin-top: 2em;
@@ -94,6 +99,9 @@ nav ul{
     border: none;
     margin-top: 1.6em;
     background: linear-gradient(to right,hsl(176, 68%, 64%), hsl(198, 60%, 50%));
+}
+button:hover{
+    background: hsl(176, 68%, 64%);
 }
 
 /* Info section */
@@ -145,6 +153,13 @@ nav ul{
     width: 60%!important;
     margin: 1em auto 1em 1.4em!important;
     border-bottom: 1px solid #62e0d9;
+}
+.action:hover{
+    color: #fff;
+    border-bottom: 1px solid #fff;
+}
+a .action:hover{
+    text-decoration: none;
 }
 
 /* Testimonials section  */
@@ -270,6 +285,9 @@ address{
 .social-media-icons svg{
     margin-left: .1em;
     margin-right: .1em;
+}
+.social-media-icons a path:hover{
+    fill: #62e0d9;
 }
 
 /* attribution styles */
