@@ -438,21 +438,25 @@ address{
     }
 
     /* Early-access section */
+    #early-access{
+        position: relative;
+        top: 19.5em;
+    }
     form{
-        display: flex;
+        display: flex!important;
         flex-wrap: wrap;
         width: 90%;
     }
     input{
-        width: 60%;
+        width: 60%!important;
         margin: 1em auto;
     }
     form button{
-        width: 100%;
+        width: 35%!important;
         margin: 1em auto;
     }
     input, form button{
-        padding:.8rem 1rem ;
+        padding:.6rem 1rem ;
     }
     
     /* Footer section */
