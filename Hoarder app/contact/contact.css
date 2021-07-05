@@ -632,9 +632,6 @@ footer section nav a:hover{
         font-weight: 900;
     }
     
-    /* #bottom-mobile{
-      display: none;
-    } */
     .socials{
       display: none;
     }
@@ -659,9 +656,6 @@ footer section nav a:hover{
 
 /* Ipad and above */
   @media (min-width: 768px){
-    #navLinks{
-      margin-left: 0;
-    }
     #desktop-nav{
       display: none;
     }
@@ -682,11 +676,6 @@ footer section nav a:hover{
       display: none;
     }
 
-  }
-  /* Above Tablets */
-  @media (min-width: 900px){
-    
-    
   }
   @media (min-width: 1440px){
     .showcase .gallery-container{
