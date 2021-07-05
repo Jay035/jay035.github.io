@@ -114,7 +114,7 @@ nav button.download{
   display: block!important;
 }
 #navLinks.active{
-  left: 0;
+  top: 5em;
 }
 
 header nav #nav-links li {
@@ -460,6 +460,14 @@ footer section nav a:hover{
     display: none;
 }
 
+@media (max-width: 450px) {
+  #bottom-mobile{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 30px;
+  }
+  
+}
 
 /* Tablets and under */
 @media (max-width: 900px) {
@@ -612,7 +620,9 @@ footer section nav a:hover{
         font-weight: 900;
     }
     
-
+    #bottom-mobile{
+      display: none;
+    }
     .socials{
       display: none;
     }
@@ -656,6 +666,9 @@ footer section nav a:hover{
     footer .subs {
       text-align: left;
   }
+    #bottom-mobile{
+      display: none;
+    }
 
   }
   /* Above Tablets */
