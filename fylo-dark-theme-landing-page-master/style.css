@@ -35,13 +35,13 @@ nav{
     font-family: 'Raleway', sans-serif;
 }
 nav img{
-    width: 30%;
+    width: 27%;
 }
 
 nav ul{
     display: flex;
     justify-content: space-between;
-    width: 60%;
+    width: 100%;
     list-style-type: none;
 }
 
@@ -73,7 +73,7 @@ nav ul{
 }
 .text{
     position: absolute;
-    top: 25em;
+    top: 16em;
     z-index: 9999;
     width: 100%;
     text-align: center;
@@ -142,7 +142,7 @@ nav ul{
 }
 .action{
     color: #62e0d9;
-    width: 45%!important;
+    width: 60%!important;
     margin: 1em auto 1em 1.4em!important;
     border-bottom: 1px solid #62e0d9;
 }
@@ -194,11 +194,11 @@ nav ul{
 /* Early-access section */
 #early-access{
     position: relative;
-    top: 47em;
+    top: 42em;
     z-index: 999;
     background-color: hsl(217, 28%, 15%);
     box-shadow: 3px 3px 2px #131a24;
-    padding: 1.5rem;
+    padding: 1.5rem 0;
     width: 90%;
     margin: 0 auto;
     border-radius: 15px;
@@ -238,7 +238,7 @@ footer{
 }
 .footer{
     padding: 1.5rem;
-    margin: 19em auto 2em;
+    margin: 13em auto 2em;
     width: 90%;
     line-height: 1.5;
     font-size: 20px;
@@ -290,16 +290,16 @@ address{
         width: 15%;
     }
     nav ul{
-        width: 30%;
+        width: 35%;
         margin-right: 1em;
     }
 
-    .text{
-        width: 40%;
-        margin: 2em auto 0;
+    .text {
+        width: 60%;
+        margin: 7em auto 0;
     }
     .intro-image{
-        width: 40%;
+        width: 45%;
     }
     .curve-mobile{
         display: none;
@@ -343,7 +343,7 @@ address{
         width: 80%;
     }
     .right h1{
-        width: 60%;
+        width: 100%;
         text-align: left;
     }
     .right p{
@@ -377,7 +377,67 @@ address{
         top: 22em;
         width: 60%;
         margin: 0 auto;
+        padding: 1.5rem ;
     }
+    form{
+        display:block;
+        width: 100%;
+    }
+    input{
+        width: 90%;
+        margin: 1em auto;
+    }
+    form button{
+        width: 60%;
+        margin: 1em auto;
+    }
+    input, form button {
+        padding:  1rem;
+    }
+    
+
+    /* Footer section */
+    footer{
+        position: absolute;
+    top: 173em;
+        
+    }
+    .foot{
+        display: grid;
+        grid-template-columns: 35% 20% 15% 15% 15% ;
+        width: 100%;
+        font-size: 18px;
+        grid-gap: 10px;
+    }
+    .footer > div > div {
+        margin: 0 ;
+    }
+    #phone {
+        margin-bottom: .5em;
+    }
+    
+}
+
+@media (min-width:1000px){
+    .text {
+        width: 40%;
+        margin: 17em auto 0;
+    }
+
+     /* Info section */
+     .info{
+        position: relative;
+        top: 2em;
+        width: 80%;
+    }
+
+    /* Operations section  */
+    .right h1{
+        width: 70%;
+        text-align: left;
+    }
+
+    /* Early-access section */
     form{
         display: flex;
         flex-wrap: wrap;
@@ -394,24 +454,13 @@ address{
     input, form button{
         padding:.8rem 1rem ;
     }
-
+    
     /* Footer section */
     footer{
         position: absolute;
-        top: 158em;
-        
+        top: 166em;
     }
-    .foot{
-        display: grid;
-        grid-template-columns: 35% 20% 15% 15% 15% ;
-        width: 100%;
-        font-size: 18px;
+    .footer{
+        margin: 10em auto 2em;
     }
-    .footer > div > div {
-        margin: 0 ;
-    }
-    #phone {
-        margin-bottom: .5em;
-    }
-    
 }
