@@ -247,7 +247,7 @@ form button{
 /* Footer section */
 footer{
     position: absolute;
-    top: 248em;
+    top: 260em;
     background-color: hsl(216, 53%, 9%);
     width: 100%;
 }
@@ -417,7 +417,7 @@ address{
     /* Footer section */
     footer{
         position: absolute;
-    top: 173em;
+        top: 180em;
         
     }
     .foot{
