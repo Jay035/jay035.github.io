@@ -85,7 +85,7 @@ nav img{
   padding: 16px 24px;
   border: none;
   margin-left: 100px;
-  width: 14%;
+  width: 15%;
 }
 #nav{
   display: flex;
@@ -100,18 +100,23 @@ nav img{
 }
 #navLinks{
   display: flex;
-  margin-left: -70px;
   transition: 0.3s;
+  margin-left: -50px;
+
 }
 #navLinks a{
-  color: #4b4b58;
+  color: #484858;
+  font-size: 0.95rem;
+  letter-spacing: 2px;
+  text-align: center;
+  text-transform: capitalize;
 }
 nav button.download{
   display: none;
 }
 #desktop-btn{
-  width: 15%;
   display: block!important;
+  font-weight: bolder;
 }
 #navLinks.active{
   top: 5em;
@@ -127,7 +132,7 @@ header nav #nav-links li {
   color: #4b4b58;
   letter-spacing: 1px;
 }
-.nav-item a:after{
+/* .nav-item a:after{
   content: "";
   display: block;
   background-color: #ff3c78;
@@ -136,7 +141,7 @@ header nav #nav-links li {
   left: 80;
   bottom: 0;
   transition: 0.3s;
-}
+} */
 
 .nav-item a:hover:after{
   width: 100%;
@@ -144,13 +149,16 @@ header nav #nav-links li {
 }
 
 .download {
-  background-color: #212121;
+  background-color: #000000;
   color: #fff;
   border-radius: 4px;
-  padding: 16px 24px;
+  padding: 16px 17px;
   margin-right: 143.5px;
   border: none;
   transition: all 0.3s ease 0s;
+}
+.download a{
+  color: #fff;
 }
 
 .download:hover {
@@ -161,7 +169,7 @@ header nav #nav-links li {
 }
 
 .nav-item{
-  margin: 1.5rem 1em;
+  margin: 1.5rem;
 }
 .hamburger{
   display: none;
@@ -496,24 +504,40 @@ footer section nav a:hover{
       padding-bottom: 3rem;
       position: fixed;
       left: -100%;
-      top: 5rem;
-      width: 100%;
+      top: 4rem;
+      min-width: 100%;
       text-align: center;
       justify-content: space-between;
       flex-direction: column;
-      background-color: #000;
+      background: rgba(15, 20, 35, 0.99);
       z-index: 9999;
+    }
+    nav li{
+      padding: 1rem;
     }
     #navLinks a{
       color: white;
+      width: 100%;
+      transition: color 1s ease, padding 1s ease, background-color 1s ease;
+      font-size: 1.10rem;
     }
+    nav li:hover{
+      background: rgba(104, 120, 126, 0.2);
+    }
+    nav li a:hover{
+      color: #B1D4E0;
+      padding-left: 30px;
+  }
+  .nav-item{
+    margin: 0;
+  }
     #navLinks.active {
-      left: 10%;
+      left: .5em;
   }
     nav button.download{
       display: block!important;
       width: 40%;
-      margin: 0 auto;
+      margin: .8em auto 0;
     }
     #desktop-btn{
       display: none!important;
@@ -525,17 +549,19 @@ footer section nav a:hover{
     }
     .hamburger.active .bar:nth-child(2) {
       opacity: 0;
+      
     }
     .hamburger.active .bar:nth-child(1) {
       transform: translateY(8px) rotate(45deg);
+      background-color: #ff3c78;
     }
     .hamburger.active .bar:nth-child(3) {
       transform: translateY(-8px) rotate(-45deg);
+      background-color: #ff3c78;
     }
-    #navLinks li{
-      width: 20%;
-      margin-left: auto;
-      margin-right: auto;
+    
+    .download {
+      background-color: #212121!important;
     }
 
     .showcase {
