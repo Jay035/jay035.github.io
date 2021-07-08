@@ -38,3 +38,6 @@ https://jay035.github.io/fylo-dark-theme-landing-page-master/
 
 Hoarder app contact
 https://jay035.github.io/Hoarder%20app/contact/
+
+Hoarder app terms and conditions
+https://jay035.github.io/Hoarder%20app/Terms%20and%20conditions/
