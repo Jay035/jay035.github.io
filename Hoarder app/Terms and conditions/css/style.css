@@ -142,6 +142,7 @@ footer section:first-child input{
 }
 footer a{
     font-weight: normal;
+    color: #000;
 }
 footer .nav-footer{
     display: flex;
@@ -203,17 +204,16 @@ footer .subs{
 #company .nav-footer > div a{
     padding-bottom: .4em;
 }
-
-
 .light-font{
     font-weight: lighter;
     margin: 0 0 .3em;
+    opacity: 0.7;
 }
 .support-link{
     font-weight: bold;
 }
 .email-btn{
-    margin-top: -40px;
+    margin-top: -30px;
 }
 .socials{
     display: flex;
@@ -238,6 +238,10 @@ footer .subs{
 @media (max-width:900px){
     .wrapper{
         width: 90%;
+    }
+    header {
+        width: 100%;
+        height: 10vh;
     }
     #navLinks{
         padding-bottom: 3rem;
@@ -381,16 +385,34 @@ footer .subs{
         width: 100%;
     }
     footer{
-        display: grid;
-        grid-template-columns:auto ;
-        grid-gap: 20px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
     }
     .desktop-com{
         display: none;
     }
     #bottom-mobile{
-        display: flex;
-        justify-content: space-between;
+        display: block;
+    }
+    .subscribe{
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+    #bottom-mobile .com .nav-footer{
+        display: flex!important;
+    }
+    #bottom-mobile #company{
+        margin-left: .5em;
+    }
+    #company .nav-footer > div {
+        display: grid;
+        grid-template-columns: 40% auto;
+        padding-bottom: .4rem;
+    }
+    
+    #bottom-mobile .com .nav-footer a{
+        width: 100%;
     }
       
 }
