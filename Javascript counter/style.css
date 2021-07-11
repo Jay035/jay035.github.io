@@ -44,4 +44,17 @@ button{
     border: none;
     border-radius: 5px;
     box-shadow: 3px 3px 3px #4a3d2b;
+    cursor: pointer;
+}
+
+@media (max-width:900px){
+    .wrapper{
+        width: 65%;
+        height: 65vh;
+    }
+    .body{
+        width: 95%;
+        height: 65vh;
+        padding-top: .8rem;
+    }
 }
