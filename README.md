@@ -44,3 +44,6 @@ https://jay035.github.io/Hoarder%20app/Terms%20and%20conditions/
 
 Hoarder app 
 https://hoarder.netlify.app/
+
+Counter
+https://jay035.github.io/Counter/
