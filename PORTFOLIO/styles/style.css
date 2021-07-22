@@ -82,7 +82,7 @@ html {
 .home-page .navbar-toggler {
   height: 3.5rem;
   width: 2rem;
-  margin-right: 0;
+  margin-right: 1em;
   margin-left: auto;
 }
 
@@ -162,7 +162,7 @@ html {
 }
 
 .home-page .top-container h4 {
-  color: #676768;
+  color: #8c8c8f;
   font-size: 18px;
   font-weight: normal;
   font-family: 'Montserrat', serif;
@@ -313,9 +313,10 @@ img {
   }
 }
 
-@media (min-width: 360px) and (max-width: 399px) and (min-height: 700px) and (max-height: 800px) {
-  .home-page .contact-links {
-    text-align: center;
+@media (min-width: 360px) and (max-width: 500px) and (min-height: 700px) and (max-height: 900px) {
+  #navbarTogglerDemo02 {
+    position: fixed;
+    top: 8% !important;
   }
 }
 
@@ -805,7 +806,7 @@ img {
 }
 
 .contact #title h1#project {
-  color: #676768 !important;
+  color: #8c8c8f !important;
   margin-left: .5em;
   opacity: .6;
   margin-top: -.4em;
@@ -820,8 +821,8 @@ img {
   font-size: 19px;
   line-height: 1.5;
   font-weight: normal;
-  opacity: .5;
   font-family: 'Segoe UI', Tahoma, sans-serif;
+  opacity: .6;
   color: #e5e6e6;
   margin: 1em 0;
 }
@@ -834,14 +835,14 @@ img {
   margin-top: 2em;
 }
 
-.contact .form-control, .contact input:-internal-autofill-selected {
+.contact .form-control {
   background-color: #0a0a0a !important;
   border: none;
   border-bottom: 2px solid #646468;
   outline: none;
   -webkit-box-shadow: none;
           box-shadow: none;
-  color: #fff;
+  color: #e5e6e6;
 }
 
 .contact textarea {
@@ -1045,7 +1046,6 @@ img {
   .contact .contentt-right {
     width: 30%;
     margin: 0 auto;
-    height: 100%;
   }
   .contact .contentt-right p {
     margin-top: 2em;
@@ -1057,5 +1057,73 @@ img {
     width: 16rem;
     margin: 2em auto 1em;
   }
+}
+
+.portfolio {
+  margin: 0;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #0a0a0a !important;
+  line-height: 2;
+}
+
+.portfolio nav {
+  padding: .5rem 1rem;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.portfolio .container-fluid {
+  height: 3.2rem;
+}
+
+.portfolio .navbar {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.portfolio .bg-dark {
+  background-color: #0a0a0a !important;
+}
+
+.portfolio .navbar-dark .navbar-toggler {
+  color: #ffffff8c;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.portfolio button:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.portfolio .navbar-toggler {
+  height: 3.5rem;
+  width: 2rem;
+  margin-right: 1em;
+  margin-left: auto;
+}
+
+.portfolio #navbarTogglerDemo02 {
+  z-index: 999;
+  position: fixed;
+  top: 10%;
+  left: 0;
+  background-color: #0a0a0a !important;
+  padding: 90px 0;
+  width: 100%;
+  height: 90vh;
+  text-align: center;
+}
+
+.portfolio .navbar-dark .navbar-nav .nav-link.active,
+.portfolio .navbar-dark .navbar-nav .show > .nav-link {
+  color: #646468;
 }
 /*# sourceMappingURL=style.css.map */
