@@ -159,6 +159,50 @@ html {
   font-size: 1.5em;
   font-family: 'Montserrat', serif;
   font-weight: normal;
+  position: relative;
+}
+
+@media (min-width: 370px) {
+  .home-page .top-container h2::before,
+  .home-page .top-container h2::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 9.4em;
+    left: 0;
+    right: 0;
+  }
+  .home-page .top-container h2::before {
+    background: #0b0b0a;
+    -webkit-animation: typewriter 6s steps(26) 1s forwards;
+            animation: typewriter 6s steps(26) 1s forwards;
+  }
+  .home-page .top-container h2::after {
+    width: .125em;
+    background: #fff;
+    -webkit-animation: typewriter 6s steps(26) 1s forwards, blink 750ms steps(26) infinite;
+            animation: typewriter 6s steps(26) 1s forwards, blink 750ms steps(26) infinite;
+  }
+  @-webkit-keyframes typewriter {
+    to {
+      left: 100%;
+    }
+  }
+  @keyframes typewriter {
+    to {
+      left: 100%;
+    }
+  }
+  @-webkit-keyframes blink {
+    to {
+      background: transparent;
+    }
+  }
+  @keyframes blink {
+    to {
+      background: transparent;
+    }
+  }
 }
 
 .home-page .top-container h4 {
@@ -625,6 +669,8 @@ img {
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
   margin: 1em auto 1em;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .about #About-me h1, .about #About-me h5 {
@@ -1125,5 +1171,111 @@ img {
 .portfolio .navbar-dark .navbar-nav .nav-link.active,
 .portfolio .navbar-dark .navbar-nav .show > .nav-link {
   color: #646468;
+}
+
+.portfolio a {
+  text-decoration: none !important;
+}
+
+.portfolio a:hover {
+  color: #fff !important;
+}
+
+.portfolio a:active {
+  color: #fff !important;
+}
+
+.portfolio .toggle-links {
+  margin-top: 1em;
+}
+
+.portfolio .toggle-links a {
+  padding-left: .5em;
+}
+
+.portfolio main {
+  background-image: url("./Images/portfolio-bg.jpg");
+  background-position: 80% 20%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  padding-top: 5em;
+  padding: 5rem 1rem 0;
+  overflow-x: hidden;
+}
+
+.portfolio main h1 {
+  font-size: 40px;
+  width: 83%;
+  margin: .6em auto;
+  overflow-x: hidden;
+  word-break: keep-all;
+}
+
+.portfolio main h1,
+.portfolio main h5 {
+  opacity: .9;
+}
+
+.portfolio main h1,
+.portfolio main h5,
+.portfolio main p {
+  color: #fff !important;
+}
+
+.portfolio main p {
+  opacity: .8;
+}
+
+.portfolio main .square {
+  width: 90%;
+  margin: auto;
+}
+
+.portfolio main .square img {
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
+.portfolio main .square button {
+  border: none;
+  background: #181818;
+  color: white;
+}
+
+@media (min-width: 992px) {
+  .portfolio .me-auto {
+    margin-right: 0 !important;
+  }
+  .portfolio div#links li {
+    float: left;
+    padding: 0 .5rem;
+  }
+  .portfolio .navbar {
+    -webkit-box-align: unset !important;
+        -ms-flex-align: unset !important;
+            align-items: unset !important;
+  }
+  .portfolio #navbarTogglerDemo02 {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: relative;
+    top: 0;
+    padding: 0;
+    height: 0;
+  }
+  .portfolio #navbarTogglerDemo02 ul {
+    float: left;
+    padding: 0 10px;
+  }
+  .portfolio .toggle-links {
+    display: none !important;
+  }
 }
 /*# sourceMappingURL=style.css.map */

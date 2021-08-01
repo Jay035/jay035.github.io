@@ -13,6 +13,7 @@ $buttonColor:#16161a;
 $cvColor:#fff;
 $cvHover:#505052;
 $scrollBackground: #101;
+$typewriterSpeed:6s;
 
 html{
   scroll-behavior: smooth;
@@ -186,6 +187,43 @@ html{
         font-size: 1.5em;
         font-family: 'Montserrat', serif;
         font-weight: normal;
+        position: relative;
+        
+      }
+      @media (min-width:370px){
+        h2::before,
+        h2::after{
+          content: '';
+          position: absolute;
+          top: 0;
+          bottom: 9.4em;
+          left: 0;
+          right: 0;
+        }
+        h2::before{
+          background: #0b0b0a;
+          animation: 
+            typewriter $typewriterSpeed steps(26) 1s forwards;
+        }
+        h2::after{
+          width: .125em;
+          background: $aColorHover;
+          animation: 
+            typewriter $typewriterSpeed steps(26) 1s forwards,
+            blink 750ms steps(26) infinite;
+        }
+
+        @keyframes typewriter {
+          to{
+            left: 100%;
+          }
+        }
+
+        @keyframes blink {
+          to{
+            background: transparent;
+          }
+        }
       }
       
       h4{
@@ -604,6 +642,9 @@ html{
       img{
         filter: grayscale(100%);
         margin: 1em auto 1em;
+        background-repeat: no-repeat;
+        background-size: cover;
+        
       }
       
       h1,h5{
@@ -1115,6 +1156,108 @@ html{
     .navbar-dark .navbar-nav .show>.nav-link {
       color: $linkColor;
     }
+
+    a{
+      text-decoration: none!important; 
+      &:hover{
+        color: $aColorHover!important;
+      }
+      &:active{
+        color: $aColorHover!important;
+      }
+    }
+
+    // social media links 
+    .toggle-links{
+      margin-top: 1em;
+      a{
+        padding-left: .5em;
+      }
+    }
     
+    // Main section 
+    main{
+      background-image: url('./Images/portfolio-bg.jpg');
+      background-position: 80% 20%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 100vh;
+      padding-top: 5em;
+      padding: 5rem 1rem 0;
+      // width: 80%;
+      // margin: 0 auto;
+      overflow-x: hidden;
+      h1{
+        font-size: 40px;
+        width: 83%;
+        margin: .6em auto;
+        overflow-x: hidden;
+        word-break: keep-all;
+        // text-shadow: -5px -7px 3px $linkColor;
+      }
+      h1,
+      h5{
+        opacity: .9;
+      }
+      h1,
+      h5,
+      p{
+        color: $aColorHover!important;
+      }
+      p{
+        opacity: .8;
+      }
+
+      // myWorks
+      .square{
+        width: 90%;
+        margin: auto;
+        // display: flex;
+        
+        img{
+          background-size: cover;
+          background-repeat: no-repeat;
+          width: 100%;
+        }
+        button{
+          border: none;
+          background: $toggleBackground;
+          color: white;
+        }
+      }
+    }
+
+    @media (min-width:992px){
+      .me-auto {
+        margin-right: 0!important;
+      }
+  
+      div#links li{
+        float: left;
+        padding: 0 .5rem;
+      }
+  
+      .navbar{
+        align-items: unset!important;
+      }
+      
+      #navbarTogglerDemo02{
+        display: flex!important;
+        flex-direction: column;
+        position: relative;
+        top: 0;
+        padding: 0;
+        height: 0;
+      }
+      #navbarTogglerDemo02 ul{
+        float: left;
+        padding: 0 10px;
+      }
+      .toggle-links{
+        display: none!important;
+      }
+      
+
+    }
 }
 
