@@ -145,7 +145,6 @@ html {
 
 @media (max-width: 767px) {
   .home-page .top-container .text {
-    width: 100%;
     margin: 45% 0 0;
   }
 }
@@ -160,49 +159,6 @@ html {
   font-family: 'Montserrat', serif;
   font-weight: normal;
   position: relative;
-}
-
-@media (min-width: 370px) {
-  .home-page .top-container h2::before,
-  .home-page .top-container h2::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 9.4em;
-    left: 0;
-    right: 0;
-  }
-  .home-page .top-container h2::before {
-    background: #0b0b0a;
-    -webkit-animation: typewriter 6s steps(26) 1s forwards;
-            animation: typewriter 6s steps(26) 1s forwards;
-  }
-  .home-page .top-container h2::after {
-    width: .125em;
-    background: #fff;
-    -webkit-animation: typewriter 6s steps(26) 1s forwards, blink 750ms steps(26) infinite;
-            animation: typewriter 6s steps(26) 1s forwards, blink 750ms steps(26) infinite;
-  }
-  @-webkit-keyframes typewriter {
-    to {
-      left: 100%;
-    }
-  }
-  @keyframes typewriter {
-    to {
-      left: 100%;
-    }
-  }
-  @-webkit-keyframes blink {
-    to {
-      background: transparent;
-    }
-  }
-  @keyframes blink {
-    to {
-      background: transparent;
-    }
-  }
 }
 
 .home-page .top-container h4 {
@@ -297,7 +253,7 @@ html {
   margin-top: 2em;
 }
 
-#about-me img {
+#about-me .left img {
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
   margin: 1em auto 1em;
@@ -337,12 +293,6 @@ html {
   text-align: center;
   position: relative;
   padding: 0 0 1.5rem;
-}
-
-img {
-  -webkit-filter: grayscale(100%);
-          filter: grayscale(100%);
-  margin: 1em auto 1em;
 }
 
 @media (min-width: 300px) and (max-width: 399px) and (max-height: 600px) {
@@ -1209,12 +1159,12 @@ img {
   width: 83%;
   margin: .6em auto;
   overflow-x: hidden;
-  word-break: keep-all;
 }
 
 .portfolio main h1,
 .portfolio main h5 {
   opacity: .9;
+  font-weight: bold;
 }
 
 .portfolio main h1,
@@ -1223,13 +1173,15 @@ img {
   color: #fff !important;
 }
 
-.portfolio main p {
+.portfolio main p, .portfolio main svg {
   opacity: .8;
 }
 
 .portfolio main .square {
   width: 90%;
-  margin: auto;
+  margin: 0 auto 1.5em;
+  -webkit-box-shadow: 5px 5px 2px #0a0a0a !important;
+          box-shadow: 5px 5px 2px #0a0a0a !important;
 }
 
 .portfolio main .square img {
@@ -1238,10 +1190,22 @@ img {
   width: 100%;
 }
 
-.portfolio main .square button {
-  border: none;
-  background: #181818;
-  color: white;
+.portfolio main .square .info {
+  background: #0a0a0a !important;
+  padding: .5rem 1rem;
+}
+
+.portfolio main .square .info p {
+  margin-bottom: 0;
+}
+
+.portfolio main .square .info p.title {
+  font-weight: 900;
+  font-size: 1.2em;
+}
+
+.portfolio main .square .info svg {
+  margin-right: .6em;
 }
 
 @media (min-width: 992px) {

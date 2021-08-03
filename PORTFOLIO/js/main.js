@@ -10,7 +10,7 @@ hamburger.addEventListener('click', () => {
 for(const input of inputField){
     input.addEventListener('click', () => {
         input.style.borderBottomColor = '#fff';
-    })
-}
+    });
+};
 
 // console.log(nameTitle.length)

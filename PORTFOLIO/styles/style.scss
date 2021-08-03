@@ -45,6 +45,9 @@ html{
 #desktop{
   display: none;
 }
+// .navbar-dark .navbar-nav .nav-link.active:active{
+//   color: $aColorHover !important;
+// }
 // Home page 
 .home-page{
         margin: 0;
@@ -174,7 +177,6 @@ html{
         padding: 1rem; 
       @media (max-width:767px){
         .text{
-          width: 100%;
           margin: 45% 0 0;
         }
       }
@@ -188,43 +190,71 @@ html{
         font-family: 'Montserrat', serif;
         font-weight: normal;
         position: relative;
-        
+        // width: 80% !important;
       }
-      @media (min-width:370px){
-        h2::before,
-        h2::after{
-          content: '';
-          position: absolute;
-          top: 0;
-          bottom: 9.4em;
-          left: 0;
-          right: 0;
-        }
-        h2::before{
-          background: #0b0b0a;
-          animation: 
-            typewriter $typewriterSpeed steps(26) 1s forwards;
-        }
-        h2::after{
-          width: .125em;
-          background: $aColorHover;
-          animation: 
-            typewriter $typewriterSpeed steps(26) 1s forwards,
-            blink 750ms steps(26) infinite;
-        }
+      
+      // @media (min-width:389px){
+      //   // h2{
+      //   //   width: 90%;
+      //   // }
+      //   h2::before,
+      //   h2::after{
+      //     content: '';
+      //     position: absolute;
+      //     top: 0;
+      //     bottom: 9.4em;
+      //     left: 0;
+      //     right: 0;
+      //   }
+      //   h2::before{
+      //     background: #0b0b0a;
+      //     animation: 
+      //       typewriter $typewriterSpeed steps(26) 1s forwards;
+      //   }
+      //   h2::after{
+      //     width: .125em;
+      //     background: $aColorHover;
+      //     animation: 
+      //       typewriter $typewriterSpeed steps(26) 1s forwards,
+      //       blink 750ms steps(26) infinite;
+      //   }
 
-        @keyframes typewriter {
-          to{
-            left: 100%;
-          }
-        }
+      //   @keyframes typewriter {
+      //     to{
+      //       left: 100%;
+      //     }
+      //   }
 
-        @keyframes blink {
-          to{
-            background: transparent;
-          }
-        }
-      }
+      //   @keyframes blink {
+      //     to{
+      //       background: transparent;
+      //     }
+      //   }
+      // }
+      // @media (min-width:500px){
+      //   h2::before,
+      //   h2::after{
+      //     content: '';
+      //     position: absolute;
+      //     bottom: 7.6em;
+      //   }
+      // }
+      // @media (min-width:630px){
+      //   h2::before,
+      //   h2::after{
+      //     content: '';
+      //     position: absolute;
+      //     bottom: 6.5em;
+      //   }
+      // }
+      // @media (min-width:760px){
+      //   h2::before,
+      //   h2::after{
+      //     content: '';
+      //     position: absolute;
+      //     bottom: 7em;
+      //   }
+      // }
       
       h4{
         color: $h4Color;
@@ -296,7 +326,7 @@ html{
       }
      
       // profile pics 
-      img{
+      .left img{
         filter: grayscale(100%);
         margin: 1em auto 1em;
       }
@@ -330,10 +360,10 @@ html{
       position: relative;
       padding: 0 0 1.5rem;
     }
-    img{
-      filter: grayscale(100%);
-      margin: 1em auto 1em;
-    }
+    // img{
+    //   filter: grayscale(100%);
+    //   margin: 1em auto 1em;
+    // }
       
 
 @media (min-width:300px) and (max-width:399px) and (max-height: 600px) {
@@ -1192,38 +1222,61 @@ html{
         width: 83%;
         margin: .6em auto;
         overflow-x: hidden;
-        word-break: keep-all;
+        // word-break: keep-all;
         // text-shadow: -5px -7px 3px $linkColor;
       }
       h1,
       h5{
         opacity: .9;
+        font-weight: bold;
       }
       h1,
       h5,
       p{
         color: $aColorHover!important;
       }
-      p{
+      p,svg{
         opacity: .8;
       }
 
       // myWorks
       .square{
         width: 90%;
-        margin: auto;
+        margin:0 auto 1.5em;
+        box-shadow: 5px 5px 2px $body;
+        // background: $body;
+        // padding: .2rem .6rem;
+        // opacity: .7;
         // display: flex;
         
         img{
           background-size: cover;
           background-repeat: no-repeat;
           width: 100%;
+          
         }
-        button{
-          border: none;
-          background: $toggleBackground;
-          color: white;
+        .info{ 
+          background: $body;
+          padding: .5rem 1rem ;
+          p{
+            margin-bottom: 0;
+          }
+          p.title{
+            font-weight: 900;
+            font-size: 1.2em;
+          }
+          svg{
+            margin-right: .6em;
+          }
+          
         }
+
+        // button{
+        //   border: none;
+        //   background: $toggleBackground;
+        //   color: white;
+        //   margin-top: .5em;
+        // }
       }
     }
 
@@ -1260,4 +1313,3 @@ html{
 
     }
 }
-
