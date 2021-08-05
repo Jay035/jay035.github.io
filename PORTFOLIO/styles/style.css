@@ -2,6 +2,10 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .bar {
   display: block;
   width: 25px;
@@ -1060,7 +1064,7 @@ html {
   overflow-y: scroll;
   overflow-x: hidden;
   font-family: 'Montserrat', sans-serif;
-  background-color: #0a0a0a !important;
+  background-color: #000;
   line-height: 2;
 }
 
@@ -1143,20 +1147,24 @@ html {
   padding-left: .5em;
 }
 
-.portfolio main {
+.portfolio .heading-bg {
   background-image: url("./Images/portfolio-bg.jpg");
-  background-position: 80% 20%;
+  background-position: center;
   background-size: cover;
-  background-repeat: no-repeat;
-  height: 100vh;
-  padding-top: 5em;
-  padding: 5rem 1rem 0;
-  overflow-x: hidden;
+  width: 100%;
+  height: 42%;
+  position: absolute;
+}
+
+.portfolio main {
+  background-color: #000;
+  width: 100%;
+  padding: 5rem 1rem 1rem;
 }
 
 .portfolio main h1 {
   font-size: 40px;
-  width: 83%;
+  text-align: center;
   margin: .6em auto;
   overflow-x: hidden;
 }
@@ -1179,9 +1187,7 @@ html {
 
 .portfolio main .square {
   width: 90%;
-  margin: 0 auto 1.5em;
-  -webkit-box-shadow: 5px 5px 2px #0a0a0a !important;
-          box-shadow: 5px 5px 2px #0a0a0a !important;
+  margin: 0 auto 2.5em;
 }
 
 .portfolio main .square img {
@@ -1192,7 +1198,9 @@ html {
 
 .portfolio main .square .info {
   background: #0a0a0a !important;
-  padding: .5rem 1rem;
+  padding: .5rem .8rem;
+  -webkit-box-shadow: 4px 4px 2px #111111;
+          box-shadow: 4px 4px 2px #111111;
 }
 
 .portfolio main .square .info p {
@@ -1204,8 +1212,40 @@ html {
   font-size: 1.2em;
 }
 
+.portfolio main .square .info div.links {
+  width: 4.5em;
+  -webkit-margin-start: auto;
+          margin-inline-start: auto;
+  -webkit-margin-end: 0;
+          margin-inline-end: 0;
+}
+
 .portfolio main .square .info svg {
   margin-right: .6em;
+}
+
+@media (min-width: 600px) {
+  .portfolio main .square {
+    width: 80%;
+  }
+}
+
+@media (min-width: 768px) {
+  .portfolio main .proto-container {
+    -webkit-clip-path: inset(0 45% 0 0);
+            clip-path: inset(0 45% 0 0);
+    position: absolute;
+    top: 20%;
+    height: 70%;
+    z-index: 0;
+    width: 100%;
+    pointer-events: none;
+  }
+  .portfolio main .proto {
+    border: 3px solid #505052;
+    width: 19%;
+    height: 85%;
+  }
 }
 
 @media (min-width: 992px) {

@@ -15,9 +15,15 @@ $cvHover:#505052;
 $scrollBackground: #101;
 $typewriterSpeed:6s;
 
+
 html{
   scroll-behavior: smooth;
 }
+
+body{
+  overflow-x: hidden;
+}
+
 .bar{
   display: block;
   width: 25px;
@@ -1129,7 +1135,7 @@ html{
   overflow-y: scroll;
   overflow-x: hidden;
   font-family: 'Montserrat', sans-serif;
-  background-color: $body;
+  background-color: #000;
   line-height: 2;
     // Navbar
     nav{
@@ -1206,20 +1212,28 @@ html{
     }
     
     // Main section 
-    main{
+    .heading-bg{
       background-image: url('./Images/portfolio-bg.jpg');
-      background-position: 80% 20%;
+      background-position: center;
       background-size: cover;
-      background-repeat: no-repeat;
-      height: 100vh;
-      padding-top: 5em;
-      padding: 5rem 1rem 0;
-      // width: 80%;
-      // margin: 0 auto;
-      overflow-x: hidden;
+      width: 100%;
+      height: 42%;
+      position: absolute;
+      // top: 20%;
+    }
+    main{
+      // background-image: url('./Images/portfolio-bg.jpg');
+      // background-position: center;
+      // background-size: cover;
+      background-color: #000;
+      // background-repeat: no-repeat;
+      // height: 45vh;
+      width: 100%;
+      padding: 5rem 1rem 1rem;
+      
       h1{
         font-size: 40px;
-        width: 83%;
+        text-align: center;
         margin: .6em auto;
         overflow-x: hidden;
         // word-break: keep-all;
@@ -1242,8 +1256,7 @@ html{
       // myWorks
       .square{
         width: 90%;
-        margin:0 auto 1.5em;
-        box-shadow: 5px 5px 2px $body;
+        margin:0 auto 2.5em;
         // background: $body;
         // padding: .2rem .6rem;
         // opacity: .7;
@@ -1253,11 +1266,11 @@ html{
           background-size: cover;
           background-repeat: no-repeat;
           width: 100%;
-          
         }
         .info{ 
           background: $body;
-          padding: .5rem 1rem ;
+          padding: .5rem .8rem;
+          box-shadow: 4px 4px 2px #111111;
           p{
             margin-bottom: 0;
           }
@@ -1265,18 +1278,42 @@ html{
             font-weight: 900;
             font-size: 1.2em;
           }
+          div.links{
+            width: 4.5em;
+            margin-inline-start: auto;
+            margin-inline-end: 0;
+          }
           svg{
             margin-right: .6em;
           }
-          
         }
+      }
+    }
 
-        // button{
-        //   border: none;
-        //   background: $toggleBackground;
-        //   color: white;
-        //   margin-top: .5em;
-        // }
+    @media (min-width:600px){
+      main{
+        .square{
+          width: 80%;
+        }
+      }
+    }
+
+    @media (min-width:768px){
+      main{
+        .proto-container{
+          clip-path: inset(0 45% 0 0);
+          position: absolute;
+          top: 20%;
+          height:70%;
+          z-index: 0;
+          width: 100%;
+          pointer-events: none;
+        }
+        .proto{
+          border: 3px solid #505052;
+          width: 19%;
+          height:85%;
+        }
       }
     }
 
@@ -1309,7 +1346,5 @@ html{
       .toggle-links{
         display: none!important;
       }
-      
-
     }
 }
