@@ -6,6 +6,16 @@ body {
   overflow-x: hidden;
 }
 
+[aria-current] {
+  color: #fff !important;
+}
+
+a:hover {
+  color: #fff !important;
+  -webkit-transition: all 0.9s ease 0s;
+  transition: all 0.9s ease 0s;
+}
+
 .bar {
   display: block;
   width: 25px;
@@ -37,6 +47,39 @@ body {
 
 #desktop {
   display: none;
+}
+
+div#links li.nav-item a.long-width::before {
+  width: 0;
+}
+
+div#links li.nav-item a.long-width:hover::before {
+  width: 70px !important;
+}
+
+div#links li.nav-item a::before {
+  content: '';
+  position: absolute;
+  top: 30px;
+  width: 0;
+  height: 2.2px;
+  background: #fff;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+div#links li.nav-item a:hover::before {
+  width: 54px;
+}
+
+.contact-links {
+  text-align: center;
+  position: relative;
+  padding: 0 0 1.5rem;
+}
+
+.contact-links a {
+  padding-left: .5rem;
 }
 
 .home-page {
@@ -104,7 +147,7 @@ body {
 
 .home-page .navbar-dark .navbar-nav .nav-link.active,
 .home-page .navbar-dark .navbar-nav .show > .nav-link {
-  color: #646468;
+  color: #a5a5a8;
 }
 
 .home-page #mobile {
@@ -166,9 +209,9 @@ body {
 }
 
 .home-page .top-container h4 {
-  color: #8c8c8f;
+  color: #a5a5a8;
   font-size: 18px;
-  font-weight: normal;
+  font-weight: 600;
   font-family: 'Montserrat', serif;
   line-height: 1.4;
   word-spacing: 2px;
@@ -198,6 +241,8 @@ body {
 
 .home-page .top-container .buttons button:hover {
   background-color: #505052;
+  -webkit-transition: all 0.9s ease 0s;
+  transition: all 0.9s ease 0s;
 }
 
 .home-page .top-container .arrow {
@@ -245,7 +290,7 @@ body {
 }
 
 #about-me {
-  color: #676768;
+  color: #a5a5a8;
   background-color: #0a0a0a;
   padding: 1rem;
 }
@@ -291,12 +336,6 @@ body {
 
 #about-me .p, #about-me h6 {
   margin-left: 1rem;
-}
-
-.contact-links {
-  text-align: center;
-  position: relative;
-  padding: 0 0 1.5rem;
 }
 
 @media (min-width: 300px) and (max-width: 399px) and (max-height: 600px) {
@@ -382,7 +421,7 @@ body {
   #desktop {
     display: block !important;
   }
-  #mobile {
+  .home-page #mobile {
     display: none !important;
   }
   .me-auto {
@@ -806,7 +845,7 @@ body {
 }
 
 .contact #title h1#project {
-  color: #8c8c8f !important;
+  color: #a5a5a8 !important;
   margin-left: .5em;
   opacity: .6;
   margin-top: -.4em;
@@ -1162,6 +1201,11 @@ body {
   padding: 5rem 1rem 1rem;
 }
 
+.portfolio main .subTitle {
+  width: 95%;
+  margin-inline: auto;
+}
+
 .portfolio main h1 {
   font-size: 40px;
   text-align: center;
@@ -1197,10 +1241,12 @@ body {
 }
 
 .portfolio main .square .info {
+  height: 60%;
   background: #0a0a0a !important;
   padding: .5rem .8rem;
   -webkit-box-shadow: 4px 4px 2px #111111;
           box-shadow: 4px 4px 2px #111111;
+  overflow-y: scroll;
 }
 
 .portfolio main .square .info p {
@@ -1225,26 +1271,24 @@ body {
 }
 
 @media (min-width: 600px) {
+  .portfolio main .subTitle {
+    width: 90%;
+  }
   .portfolio main .square {
     width: 80%;
   }
 }
 
 @media (min-width: 768px) {
-  .portfolio main .proto-container {
-    -webkit-clip-path: inset(0 45% 0 0);
-            clip-path: inset(0 45% 0 0);
-    position: absolute;
-    top: 20%;
-    height: 70%;
-    z-index: 0;
-    width: 100%;
-    pointer-events: none;
+  .portfolio main section {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
   }
-  .portfolio main .proto {
-    border: 3px solid #505052;
-    width: 19%;
-    height: 85%;
+  .portfolio main h1 {
+    font-size: 50px;
+    margin: 0 auto .6em;
   }
 }
 

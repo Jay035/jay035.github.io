@@ -8,20 +8,29 @@ $body:#0a0a0a!important;
 $mainBackground:#444444;
 $mainTextColor:whitesmoke;
 $bottomTextColor:#676768;
-$h4Color:#8c8c8f;
+$h4Color:#a5a5a8;
 $buttonColor:#16161a;
 $cvColor:#fff;
 $cvHover:#505052;
 $scrollBackground: #101;
 $typewriterSpeed:6s;
 
-
+// Global styles
 html{
   scroll-behavior: smooth;
 }
 
 body{
   overflow-x: hidden;
+}
+
+[aria-current]{
+  color: $aColorHover !important;
+}
+
+a:hover{
+  color:$aColorHover!important;
+  transition: all 0.9s ease 0s;
 }
 
 .bar{
@@ -51,9 +60,42 @@ body{
 #desktop{
   display: none;
 }
-// .navbar-dark .navbar-nav .nav-link.active:active{
-//   color: $aColorHover !important;
-// }
+
+div#links li.nav-item a.long-width{
+  &::before{
+    width: 0;
+  }
+  &:hover::before{
+    width: 70px!important;
+  }
+}
+div#links li.nav-item a{
+  &::before{
+    content: '';
+    position: absolute;
+    top: 30px;
+    // left: 0;
+    width: 0;
+    height: 2.2px;
+    background: $aColorHover;
+    transition: all 0.4s ease;
+  }
+  &:hover::before{
+    width: 54px;
+  }
+}
+
+// social media links
+.contact-links{
+  text-align: center;
+  position: relative;
+  padding: 0 0 1.5rem;
+  a{
+    padding-left: .5rem;
+  }
+}
+
+
 // Home page 
 .home-page{
         margin: 0;
@@ -119,9 +161,9 @@ body{
 
     .navbar-dark .navbar-nav .nav-link.active, 
     .navbar-dark .navbar-nav .show>.nav-link {
-      color: $linkColor;
+      color: $h4Color;
     }
-    
+      
     // link to the about page on mobile 
     #mobile{
       display: block;
@@ -265,7 +307,7 @@ body{
       h4{
         color: $h4Color;
         font-size: 18px;
-        font-weight: normal;
+        font-weight: 600;
         font-family: 'Montserrat', serif;
         line-height: 1.4;
         word-spacing: 2px;
@@ -291,6 +333,7 @@ body{
         
         &:hover{
             background-color: $cvHover;
+            transition: all 0.9s ease 0s;
             // font-size: 1rem;
         }
     }
@@ -320,7 +363,7 @@ body{
   }
   // About page 
     #about-me{
-      color: #676768;
+      color: $h4Color;
       background-color: #0a0a0a;
       padding: 1rem;
       
@@ -360,12 +403,7 @@ body{
       }
   
     }
-    // social media links
-    .contact-links{
-      text-align: center;
-      position: relative;
-      padding: 0 0 1.5rem;
-    }
+    
     // img{
     //   filter: grayscale(100%);
     //   margin: 1em auto 1em;
@@ -458,7 +496,7 @@ body{
     }
 
     // link to about page on mobile 
-    #mobile{
+    .home-page #mobile{
       display: none!important;
     }
    
@@ -1230,6 +1268,11 @@ body{
       // height: 45vh;
       width: 100%;
       padding: 5rem 1rem 1rem;
+
+      .subTitle{
+        width: 95%;
+        margin-inline: auto;
+      }
       
       h1{
         font-size: 40px;
@@ -1268,9 +1311,11 @@ body{
           width: 100%;
         }
         .info{ 
+          height: 60%;
           background: $body;
           padding: .5rem .8rem;
           box-shadow: 4px 4px 2px #111111;
+          overflow-y: scroll;
           p{
             margin-bottom: 0;
           }
@@ -1292,6 +1337,9 @@ body{
 
     @media (min-width:600px){
       main{
+        .subTitle{
+          width: 90%;
+        }
         .square{
           width: 80%;
         }
@@ -1300,20 +1348,28 @@ body{
 
     @media (min-width:768px){
       main{
-        .proto-container{
-          clip-path: inset(0 45% 0 0);
-          position: absolute;
-          top: 20%;
-          height:70%;
-          z-index: 0;
-          width: 100%;
-          pointer-events: none;
+        section{
+          display: grid;
+          grid-template-columns: auto auto ;
         }
-        .proto{
-          border: 3px solid #505052;
-          width: 19%;
-          height:85%;
+        h1 {
+          font-size: 50px;
+          margin: 0 auto .6em;
         }
+        // .proto-container{
+        //   clip-path: inset(0 45% 0 0);
+        //   position: absolute;
+        //   top: 20%;
+        //   height:70%;
+        //   z-index: 0;
+        //   width: 100%;
+        //   pointer-events: none;
+        // }
+        // .proto{
+        //   border: 3px solid #505052;
+        //   width: 19%;
+        //   height:85%;
+        // }
       }
     }
 
