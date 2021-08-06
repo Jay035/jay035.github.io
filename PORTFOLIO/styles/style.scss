@@ -61,27 +61,29 @@ a:hover{
   display: none;
 }
 
-div#links li.nav-item a.long-width{
-  &::before{
-    width: 0;
+@media (min-width:992px){
+  div#links li.nav-item a.long-width{
+    &::before{
+      width: 0;
+    }
+    &:hover::before{
+      width: 70px!important;
+    }
   }
-  &:hover::before{
-    width: 70px!important;
-  }
-}
-div#links li.nav-item a{
-  &::before{
-    content: '';
-    position: absolute;
-    top: 30px;
-    // left: 0;
-    width: 0;
-    height: 2.2px;
-    background: $aColorHover;
-    transition: all 0.4s ease;
-  }
-  &:hover::before{
-    width: 54px;
+  div#links li.nav-item a{
+    &::before{
+      content: '';
+      position: absolute;
+      top: 30px;
+      // left: 0;
+      width: 0;
+      height: 2.2px;
+      background: $aColorHover;
+      transition: all 0.4s ease;
+    }
+    &:hover::before{
+      width: 54px;
+    }
   }
 }
 
@@ -688,7 +690,7 @@ div#links li.nav-item a{
       }
    
     #About-me{
-      color: #676768;
+      color: $h4Color;
       padding: 1rem;
       
       div{
@@ -916,8 +918,8 @@ div#links li.nav-item a{
           line-height: 1.5;
           font-weight: normal;
           font-family: 'Segoe UI', Tahoma, sans-serif;
-          opacity: .6;
-          color: #e5e6e6;
+          // opacity: .6;
+          color: $h4Color;
           margin: 1em 0;
         }
 
@@ -935,7 +937,7 @@ div#links li.nav-item a{
           border-bottom: 2px solid $linkColor;
           outline: none;
           box-shadow: none;
-          color: #e5e6e6;
+          color: $h4Color;
         }
 
         textarea{
@@ -951,7 +953,7 @@ div#links li.nav-item a{
           padding-top: 1rem;
           padding-bottom: .5rem;
           margin-bottom: 1.4em;
-          color: $aColorHover;
+          color: $h4Color;
         }
 
         // send button 
@@ -1250,15 +1252,15 @@ div#links li.nav-item a{
     }
     
     // Main section 
-    .heading-bg{
-      background-image: url('./Images/portfolio-bg.jpg');
-      background-position: center;
-      background-size: cover;
-      width: 100%;
-      height: 42%;
-      position: absolute;
-      // top: 20%;
-    }
+    // .heading-bg{
+    //   background-image: url('./Images/portfolio-bg.jpg');
+    //   background-position: center;
+    //   background-size: cover;
+    //   width: 100%;
+    //   height: 42%;
+    //   position: absolute;
+    //   // top: 20%;
+    // }
     main{
       // background-image: url('./Images/portfolio-bg.jpg');
       // background-position: center;
@@ -1314,8 +1316,8 @@ div#links li.nav-item a{
           height: 60%;
           background: $body;
           padding: .5rem .8rem;
-          box-shadow: 4px 4px 2px #111111;
-          overflow-y: scroll;
+          box-shadow: 4px 4px 8px #111111;
+          // overflow-y: scroll;
           p{
             margin-bottom: 0;
           }
@@ -1349,8 +1351,20 @@ div#links li.nav-item a{
     @media (min-width:768px){
       main{
         section{
-          display: grid;
-          grid-template-columns: auto auto ;
+          display: flex;
+          flex-wrap: wrap;
+          width: 100%;
+          margin:0 auto;
+
+          div.square{
+            width: 20em;
+            margin:2em auto;
+          }
+          img{
+            margin: 0;
+            filter: unset;
+          }
+          // grid-template-columns: auto auto ;
         }
         h1 {
           font-size: 50px;
@@ -1401,6 +1415,23 @@ div#links li.nav-item a{
       }
       .toggle-links{
         display: none!important;
+      }
+    }
+
+    @media (min-width:1000px){
+      main{
+        section{
+          width: 90%;
+        }
+        .subTitle{
+          h5{
+            font-size: 1.5rem !important;
+          }
+          p{
+            font-size: 1.2rem !important;
+          }
+        }
+        
       }
     }
 }

@@ -49,27 +49,26 @@ a:hover {
   display: none;
 }
 
-div#links li.nav-item a.long-width::before {
-  width: 0;
-}
-
-div#links li.nav-item a.long-width:hover::before {
-  width: 70px !important;
-}
-
-div#links li.nav-item a::before {
-  content: '';
-  position: absolute;
-  top: 30px;
-  width: 0;
-  height: 2.2px;
-  background: #fff;
-  -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease;
-}
-
-div#links li.nav-item a:hover::before {
-  width: 54px;
+@media (min-width: 992px) {
+  div#links li.nav-item a.long-width::before {
+    width: 0;
+  }
+  div#links li.nav-item a.long-width:hover::before {
+    width: 70px !important;
+  }
+  div#links li.nav-item a::before {
+    content: '';
+    position: absolute;
+    top: 30px;
+    width: 0;
+    height: 2.2px;
+    background: #fff;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+  }
+  div#links li.nav-item a:hover::before {
+    width: 54px;
+  }
 }
 
 .contact-links {
@@ -626,7 +625,7 @@ div#links li.nav-item a:hover::before {
 }
 
 .about #About-me {
-  color: #676768;
+  color: #a5a5a8;
   padding: 1rem;
 }
 
@@ -861,8 +860,7 @@ div#links li.nav-item a:hover::before {
   line-height: 1.5;
   font-weight: normal;
   font-family: 'Segoe UI', Tahoma, sans-serif;
-  opacity: .6;
-  color: #e5e6e6;
+  color: #a5a5a8;
   margin: 1em 0;
 }
 
@@ -881,7 +879,7 @@ div#links li.nav-item a:hover::before {
   outline: none;
   -webkit-box-shadow: none;
           box-shadow: none;
-  color: #e5e6e6;
+  color: #a5a5a8;
 }
 
 .contact textarea {
@@ -892,7 +890,7 @@ div#links li.nav-item a:hover::before {
   padding-top: 1rem;
   padding-bottom: .5rem;
   margin-bottom: 1.4em;
-  color: #fff;
+  color: #a5a5a8;
 }
 
 .contact button#send {
@@ -1186,15 +1184,6 @@ div#links li.nav-item a:hover::before {
   padding-left: .5em;
 }
 
-.portfolio .heading-bg {
-  background-image: url("./Images/portfolio-bg.jpg");
-  background-position: center;
-  background-size: cover;
-  width: 100%;
-  height: 42%;
-  position: absolute;
-}
-
 .portfolio main {
   background-color: #000;
   width: 100%;
@@ -1244,9 +1233,8 @@ div#links li.nav-item a:hover::before {
   height: 60%;
   background: #0a0a0a !important;
   padding: .5rem .8rem;
-  -webkit-box-shadow: 4px 4px 2px #111111;
-          box-shadow: 4px 4px 2px #111111;
-  overflow-y: scroll;
+  -webkit-box-shadow: 4px 4px 8px #111111;
+          box-shadow: 4px 4px 8px #111111;
 }
 
 .portfolio main .square .info p {
@@ -1281,10 +1269,22 @@ div#links li.nav-item a:hover::before {
 
 @media (min-width: 768px) {
   .portfolio main section {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: auto auto;
-        grid-template-columns: auto auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .portfolio main section div.square {
+    width: 20em;
+    margin: 2em auto;
+  }
+  .portfolio main section img {
+    margin: 0;
+    -webkit-filter: unset;
+            filter: unset;
   }
   .portfolio main h1 {
     font-size: 50px;
@@ -1324,6 +1324,18 @@ div#links li.nav-item a:hover::before {
   }
   .portfolio .toggle-links {
     display: none !important;
+  }
+}
+
+@media (min-width: 1000px) {
+  .portfolio main section {
+    width: 90%;
+  }
+  .portfolio main .subTitle h5 {
+    font-size: 1.5rem !important;
+  }
+  .portfolio main .subTitle p {
+    font-size: 1.2rem !important;
   }
 }
 /*# sourceMappingURL=style.css.map */
