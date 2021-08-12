@@ -137,6 +137,38 @@ h4 {
 }
 
 @media (min-width: 992px) {
+  .me-auto {
+    margin-right: 0 !important;
+  }
+  div#links li {
+    float: left;
+    padding: 0 .5rem;
+  }
+  .navbar {
+    -webkit-box-align: unset !important;
+        -ms-flex-align: unset !important;
+            align-items: unset !important;
+  }
+  #navbarTogglerDemo02 {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: relative;
+    top: 0;
+    padding: 0;
+    height: 0;
+  }
+  #navbarTogglerDemo02 ul {
+    float: left;
+    padding: 0 10px;
+  }
+  .toggle-links {
+    display: none !important;
+  }
   div#links li.nav-item a.long-width::before {
     width: 0;
   }
@@ -543,13 +575,17 @@ h4 {
 
 .portfolio {
   font-family: 'Montserrat', serif;
+  background-color: #000 !important;
+}
+
+.portfolio .bg-dark {
+  background-color: #000 !important;
 }
 
 .portfolio main {
   background-image: url("./Images/portfolio-bg.jpg");
   background-position: top;
   background-size: cover;
-  background-color: #000;
   background-repeat: no-repeat;
   width: 100%;
   padding: 2rem 1rem 1rem;
@@ -664,41 +700,6 @@ h4 {
   }
 }
 
-@media (min-width: 992px) {
-  .portfolio .me-auto {
-    margin-right: 0 !important;
-  }
-  .portfolio div#links li {
-    float: left;
-    padding: 0 .5rem;
-  }
-  .portfolio .navbar {
-    -webkit-box-align: unset !important;
-        -ms-flex-align: unset !important;
-            align-items: unset !important;
-  }
-  .portfolio #navbarTogglerDemo02 {
-    display: -webkit-box !important;
-    display: -ms-flexbox !important;
-    display: flex !important;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    position: relative;
-    top: 0;
-    padding: 0;
-    height: 0;
-  }
-  .portfolio #navbarTogglerDemo02 ul {
-    float: left;
-    padding: 0 10px;
-  }
-  .portfolio .toggle-links {
-    display: none !important;
-  }
-}
-
 @media (min-width: 1000px) {
   .portfolio main section {
     width: 90%;
@@ -722,7 +723,10 @@ h4 {
   background-color: #0a0a0a !important;
   overflow-y: scroll;
   overflow-x: hidden;
-  font-family: 'Montserrat', sans-serif;
+}
+
+.about a {
+  text-decoration: none;
 }
 
 .about #about-me {
@@ -746,6 +750,7 @@ h4 {
   display: grid;
   width: 95%;
   margin: 0 auto;
+  font-size: 1.25rem;
 }
 
 .about #about-me .about-sections div.skill {
@@ -754,6 +759,14 @@ h4 {
 
 .about #about-me .about-sections h1, .about #about-me .about-sections h5 {
   font-weight: bolder;
+}
+
+.about #about-me .about-sections h5 {
+  font-size: 1.45rem;
+}
+
+.about #about-me .about-sections h6 {
+  font-size: 1.25rem;
 }
 
 .about #about-me .about-sections h3 span {
@@ -771,38 +784,38 @@ h4 {
   padding: 0 0 1.5rem;
 }
 
+@media (min-width: 768px) {
+  .about .left {
+    width: 30em;
+    margin-inline: auto;
+  }
+  .about .right {
+    width: 30em;
+    margin-inline: auto;
+  }
+}
+
 @media (min-width: 992px) {
-  .about .me-auto {
-    margin-right: 0 !important;
+  .about .about-sections {
+    display: -ms-grid;
+    display: grid;
+    grid-gap: 30px;
+        grid-template-areas: "left content";
+    width: 100%;
+    margin-top: 2em !important;
   }
-  .about div#links li {
-    float: left;
-    padding: 0 .5rem;
+  .about .about-sections div.skill {
+    margin-top: 0 !important;
   }
-  .about .navbar {
-    -webkit-box-align: unset !important;
-        -ms-flex-align: unset !important;
-            align-items: unset !important;
+  .about .about-sections .left {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: left;
   }
-  .about #navbarTogglerDemo02 {
-    display: -webkit-box !important;
-    display: -ms-flexbox !important;
-    display: flex !important;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    position: relative;
-    top: 0;
-    padding: 0;
-    height: 0;
-  }
-  .about #navbarTogglerDemo02 ul {
-    float: left;
-    padding: 0 10px;
-  }
-  .about .toggle-links {
-    display: none !important;
+  .about .about-sections .right {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: content;
   }
 }
 
@@ -818,7 +831,7 @@ h4 {
   }
 }
 
-@media (min-width: 130px) {
+@media (min-width: 1300px) {
   .about #about-me h1 {
     margin-top: 1.2em;
   }
@@ -832,101 +845,9 @@ h4 {
   /*main content */
 }
 
-.contact .bg-light {
-  background-color: #0a0a0a !important;
-}
-
-.contact .navbar-light .navbar-toggler {
-  border: none !important;
-  color: transparent;
-}
-
-.contact button:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.contact nav {
-  padding: .5rem 1rem;
-  position: fixed;
-  z-index: 999;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.contact .container-fluid {
-  height: 3.2rem;
-}
-
-.contact .navbar {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.contact .bg-dark {
-  background-color: #0a0a0a !important;
-}
-
-.contact .navbar-dark .navbar-toggler {
-  color: #ffffff8c;
-  border: none;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-}
-
-.contact button:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.contact .navbar-toggler {
-  height: 3.5rem;
-}
-
-.contact .navbar-toggler-icon {
-  height: 2.5rem;
-  width: 2.5rem;
-}
-
-.contact #navbarTogglerDemo02 {
-  z-index: 999;
-  position: fixed;
-  top: 10%;
-  left: 0;
-  background-color: #0a0a0a !important;
-  padding: 90px 0;
-  width: 100%;
-  height: 90vh;
-  text-align: center;
-}
-
-.contact .navbar-dark .navbar-nav .nav-link.active,
-.contact .navbar-dark .navbar-nav .show > .nav-link {
-  color: #646468;
-}
-
-.contact .toggle-links {
-  margin-top: 1em;
-}
-
-.contact a {
-  text-decoration: none;
-  color: #d8d6d6;
-  padding-left: .5em;
-}
-
-.contact a:hover {
-  color: #fff !important;
-}
-
-.contact a:active {
-  color: #fff !important;
-}
-
 .contact #title {
   display: block;
-  padding-top: 8rem;
+  padding-top: 5rem;
   padding-left: 2rem;
   max-width: 900px;
   margin: 0 auto;
@@ -960,7 +881,7 @@ h4 {
   color: #747577;
 }
 
-.contact p {
+.contact .container p {
   font-size: 19px;
   line-height: 1.5;
   font-weight: normal;
@@ -969,15 +890,15 @@ h4 {
   margin: 1em 0;
 }
 
-.contact p.subText {
+.contact .container p.subText {
   margin-left: 1em;
 }
 
-.contact form {
+.contact .container form {
   margin-top: 2em;
 }
 
-.contact .form-control {
+.contact .container .form-control {
   background-color: #0a0a0a !important;
   border: none;
   border-bottom: 2px solid #646468;
@@ -987,18 +908,18 @@ h4 {
   color: #a5a5a8;
 }
 
-.contact textarea {
+.contact .container textarea {
   border-radius: 5px;
 }
 
-.contact input {
+.contact .container input {
   padding-top: 1rem;
   padding-bottom: .5rem;
   margin-bottom: 1.4em;
   color: #a5a5a8;
 }
 
-.contact button#send {
+.contact .container button#send {
   background: #646468;
   border: none;
   color: white;
@@ -1009,23 +930,21 @@ h4 {
   margin-bottom: .5em;
 }
 
-.contact button#send:hover {
-  background: #10101a;
+.contact .container button#send:hover, .contact .container button#send:active {
+  background: #505052;
+  -webkit-transition: all 0.9s ease 0s;
+  transition: all 0.9s ease 0s;
 }
 
-.contact button#send:active {
-  background: #10101a;
-}
-
-.contact #left {
+.contact .container #left {
   display: none;
 }
 
-.contact .forDesktop {
+.contact .container .forDesktop {
   display: none;
 }
 
-.contact .footer-links {
+.contact .container .footer-links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1072,38 +991,6 @@ h4 {
   .contact body {
     overflow-x: hidden;
     background: #bebdbd;
-  }
-  .contact .me-auto {
-    margin-right: 0 !important;
-  }
-  .contact div#links li {
-    float: left;
-    padding: 0 .5rem;
-  }
-  .contact .navbar {
-    -webkit-box-align: unset !important;
-        -ms-flex-align: unset !important;
-            align-items: unset !important;
-  }
-  .contact #navbarTogglerDemo02 {
-    display: -webkit-box !important;
-    display: -ms-flexbox !important;
-    display: flex !important;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    position: relative;
-    top: 0;
-    padding: 0;
-    height: 0;
-  }
-  .contact #navbarTogglerDemo02 ul {
-    float: left;
-    padding: 0 10px;
-  }
-  .contact .toggle-links {
-    display: none;
   }
   .contact #title {
     padding-left: 1.2rem;
@@ -1193,7 +1080,7 @@ h4 {
     margin-top: 2em;
   }
   .contact .forDesktop {
-    display: block;
+    display: block !important;
   }
   .contact .footer-links {
     width: 16rem;

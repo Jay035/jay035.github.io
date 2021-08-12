@@ -149,7 +149,36 @@ h4{
   display: none;
 }
 
+
 @media (min-width:992px){
+  .me-auto {
+    margin-right: 0!important;
+  }
+
+  div#links li{
+    float: left;
+    padding: 0 .5rem;
+  }
+
+  .navbar{
+    align-items: unset!important;
+  }
+  
+  #navbarTogglerDemo02{
+    display: flex!important;
+    flex-direction: column;
+    position: relative;
+    top: 0;
+    padding: 0;
+    height: 0;
+  }
+  #navbarTogglerDemo02 ul{
+    float: left;
+    padding: 0 10px;
+  }
+  .toggle-links{
+    display: none!important;
+  }
   div#links li.nav-item a.long-width{
     &::before{
       width: 0;
@@ -314,9 +343,8 @@ h4{
         display: block;
         
         &:hover{
-            background-color: $cvHover;
-            transition: all 0.9s ease 0s;
-            // font-size: 1rem;
+          background-color: $cvHover;
+          transition: all 0.9s ease 0s;
         }
     }
     // bouncing arrow 
@@ -624,15 +652,17 @@ h4{
   // Portfolio page
 .portfolio{
   font-family: 'Montserrat', serif;
+  background-color: #000 !important;
+    .bg-dark {
+      background-color: #000 !important;
+    }
     // Main section 
     
     main{
       background-image: url('./Images/portfolio-bg.jpg');
       background-position: top;
       background-size: cover;
-      background-color: #000;
       background-repeat: no-repeat;
-      // height: 45vh;
       width: 100%;
       padding: 2rem 1rem 1rem;
 
@@ -646,14 +676,14 @@ h4{
         text-align: center;
         margin: .6em auto;
         overflow-x: hidden;
-        // word-break: keep-all;
-        // text-shadow: -5px -7px 3px $linkColor;
       }
+
       h1,
       h5{
         opacity: .9;
         font-weight: bold;
       }
+
       h1,
       h5,
       p{
@@ -667,10 +697,6 @@ h4{
       .square{
         width: 90%;
         margin:0 auto 2.5em;
-        // background: $body;
-        // padding: .2rem .6rem;
-        // opacity: .7;
-        // display: flex;
         
         img{
           background-size: cover;
@@ -678,13 +704,15 @@ h4{
           width: 100%;
           margin-inline: -.5em;
         }
+
+        // project info 
         .info{ 
           height: 60%;
           width: 100%;
           background: #111111;
           padding: .5rem .8rem;
           box-shadow: 4px 4px 8px #111111;
-          // overflow-y: scroll;
+
           p{
             margin-bottom: 0;
           }
@@ -704,6 +732,7 @@ h4{
       }
     }
 
+    // footer
     footer{
       background: #000;
       padding-top: 1rem;
@@ -745,59 +774,10 @@ h4{
           font-size: 50px;
           margin: 0 auto .6em;
         }
-        // .proto-container{
-        //   clip-path: inset(0 5% 0 0);
-        //   position: fixed;
-        //   top: 23%;
-        //   left: 10em;
-        //   right: auto;
-        //   height:70%;
-        //   z-index: 0;
-        //   width: 100%;
-        //   pointer-events: none;
-        // }
-        // .proto{
-        //   border: 3px solid $h4Color;
-        //   width: 19%;
-        //   height: 90%;
-        //   float: left;
-        //   margin-left: 1em;
-        //   transform: translateX(10%)
-        // }
       }
     }
 
-    @media (min-width:992px){
-      .me-auto {
-        margin-right: 0!important;
-      }
-  
-      div#links li{
-        float: left;
-        padding: 0 .5rem;
-      }
-  
-      .navbar{
-        align-items: unset!important;
-      }
-      
-      #navbarTogglerDemo02{
-        display: flex!important;
-        flex-direction: column;
-        position: relative;
-        top: 0;
-        padding: 0;
-        height: 0;
-      }
-      #navbarTogglerDemo02 ul{
-        float: left;
-        padding: 0 10px;
-      }
-      .toggle-links{
-        display: none!important;
-      }
-    }
-
+    
     @media (min-width:1000px){
       main{
         section{
@@ -811,7 +791,6 @@ h4{
             font-size: 1.2rem !important;
           }
         }
-        
       }
     }
 
@@ -831,7 +810,10 @@ h4{
     background-color: $body;
     overflow-y: scroll;
     overflow-x: hidden;
-    font-family: 'Montserrat', sans-serif;
+
+    a{
+      text-decoration: none;
+    }
     
     #about-me{
       color: $h4Color;
@@ -852,6 +834,7 @@ h4{
         display: grid;
         width: 95%;
         margin: 0 auto;
+        font-size: 1.25rem;
 
         div.skill{
           margin-top: 1em;
@@ -859,6 +842,14 @@ h4{
 
         h1,h5{
           font-weight: bolder;
+        }
+
+        h5 {
+          font-size: 1.45rem;
+        }
+
+        h6{
+          font-size: 1.25rem;
         }
 
         h3 span{
@@ -878,37 +869,43 @@ h4{
         padding: 0 0 1.5rem;
       }
 
+      // Tablet screen size and above
+    @media (min-width:768px) {
+      // about-me left column 
+      .left{
+        width: 30em;
+        margin-inline: auto;
+      }
+      // about-me right column 
+      .right{
+        width: 30em;
+        margin-inline: auto;
+      }
+    }
+
     // Large screens
     @media (min-width: 992px){
-      .me-auto {
-        margin-right: 0!important;
+      .about-sections{
+        display: grid;
+        grid-gap: 30px;
+        grid-template-areas: "left content";
+        width: 100%;
+        margin-top: 2em !important;
+
+        div.skill{
+          margin-top: 0 !important;
+        }
+        // left column
+        .left{
+          grid-area:left;
+        }
+        // right column
+        .right{
+          grid-area:content;
+        }
+        
       }
-  
-      div#links li{
-        float: left;
-        padding: 0 .5rem;
-      }
-  
-      .navbar{
-        align-items: unset!important;
-      }
-      
-      #navbarTogglerDemo02{
-        display: flex!important;
-        flex-direction: column;
-        position: relative;
-        top: 0;
-        padding: 0;
-        height: 0;
-      }
-      #navbarTogglerDemo02 ul{
-        float: left;
-        padding: 0 10px;
-      }
-      .toggle-links{
-        display: none!important;
-      }
-      
+
     }
 
       @media (max-width: 1000px){
@@ -923,11 +920,11 @@ h4{
           }
       }
 
-      @media (min-width: 130px){
-          #about-me h1{
-            margin-top: 1.2em;
-          }
+      @media (min-width: 1300px){
+        #about-me h1{
+          margin-top: 1.2em;
         }
+      }
   }
     
     
@@ -940,241 +937,152 @@ h4{
   overflow-x: hidden;
   font-family: 'Montserrat', sans-serif;
   
-    .bg-light{
-      background-color:$body;
-    }
-  
-    .navbar-light .navbar-toggler{
-      border: none!important;
-      color:transparent;
-    }
+    /*main content */
+    #title{
+      display: block;
+      padding-top: 5rem;
+      padding-left: 2rem;
+      max-width: 900px;
+      margin: 0 auto;
 
-    button:focus:not(:focus-visible){
-      outline: none;
-    }
-    // Navbar 
-    nav{
-      padding: .5rem 1rem ;
-      position: fixed;
-      z-index: 999;
-      width: 100%;
-      display: flex;
-    }
-
-    .container-fluid{
-      height: 3.2rem;
-    }
-
-    .navbar{
-      align-items: center;
-    }
-
-    .bg-dark {
-      background-color:$body;
-    }
-
-    .navbar-dark .navbar-toggler {
-      color: $toggleColor;
-      border:none ;
-      box-shadow: none;
-    }
-
-    button:focus:not(:focus-visible){
-      outline: none;
-    }
-
-    .navbar-toggler{
-      height: 3.5rem;
-    }
-      
-    .navbar-toggler-icon{
-      height: 2.5rem;
-      width:2.5rem;
-    }
-    // Navlinks
-    #navbarTogglerDemo02{
-      z-index: 999;
-      position: fixed;
-      top: 10%;
-      left: 0;
-      background-color:$body;
-      padding: 90px 0;
-      width: 100%;
-      height: 90vh;
-      text-align: center;
-    }
-
-    .navbar-dark .navbar-nav .nav-link.active, 
-    .navbar-dark .navbar-nav .show>.nav-link {
-      color: $linkColor;
-    }
-
-    .toggle-links{
-      margin-top: 1em;
-    }
-    a{
-      text-decoration: none;
-      color:  $aColor;
-      padding-left: .5em;
-      &:hover{
-        color:$aColorHover!important;
+      h1.title{
+        text-align: left;
+        padding:0 1rem .1rem 0;
+        font-size:36px; 
+        color: #e5e6e6!important;
+        text-shadow: 2px 0 0 #49574f;
       }
-      &:active{
-        color: $aColorHover!important;
-      }
-    }
-    
-/*main content */
-#title{
-  display: block;
-  padding-top: 8rem;
-  padding-left: 2rem;
-  max-width: 900px;
-  margin: 0 auto;
 
-  h1.title{
-    text-align: left;
-    padding:0 1rem .1rem 0;
-    font-size:36px; 
-    color: #e5e6e6!important;
-    text-shadow: 2px 0 0 #49574f;
-  }
-
-  // horizontal line 
-  hr{
-    background-color: $aColorHover;
-    height: .14rem;
-    width: 2.6rem;
-    display: inline-block;
-    margin-right: .2em;
-  }
-  // 'have a project title' style
-  h1#project{
-    color: $h4Color!important;
-    margin-left: .5em;
-    opacity: .6;
-    margin-top: -.4em;
-  }
-}
-
-// container 
-.container{
-    padding: 29px;
-    color: #747577;
-   }
-
-    p{
-      font-size: 19px;
-      line-height: 1.5;
-      font-weight: normal;
-      font-family: 'Segoe UI', Tahoma, sans-serif;
-      // opacity: .6;
-      color: $h4Color;
-      margin: 1em 0;
-    }
-
-    p.subText{
-      margin-left: 1em;
-    }
-    // form 
-    form{
-      margin-top: 2em;
-    }
-
-    .form-control{
-      background-color: $body;
-      border: none;
-      border-bottom: 2px solid $linkColor;
-      outline: none;
-      box-shadow: none;
-      color: $h4Color;
-    }
-
-    textarea{
-      border-radius: 5px;
-    }
-
-    // span{
-    //   color: #10101a;
-    // }
-
-    // input 
-    input{
-      padding-top: 1rem;
-      padding-bottom: .5rem;
-      margin-bottom: 1.4em;
-      color: $h4Color;
-    }
-
-    // send button 
-    button#send{
-      background:  $linkColor;
-      border: none;
-      color: white;
-      width: 6rem;
-      padding: .5rem 0;
-      border-radius: 10px;
-      margin-top: 2em;
-      margin-bottom: .5em;
-    
-      // button hover state 
-      &:hover{
-        background: #10101a;
-      }
-      // button active state 
-      &:active{
-        background: #10101a;
-      }
-    } 
-
-    #left{
-      display: none;
-    }
-
-    .forDesktop{
-      display: none;
-    }
-
-    // p.connect::after{
-    //   content: '\2212';
-    // }
-
-    .footer-links{
-      display: flex;
-      justify-content: space-between;
-      width: 15rem;
-      margin:1em auto;
-      padding-bottom: 1rem;
-    }
-    @media (min-width:600px) {
-      #title{
-        padding-left: 3rem;
-      }
-      #title h1.title {
-        font-size: 40px;
-      }
-      h1#project{
-        font-size: 45px!important;
-        margin-left: 1.5em;
-      }
+      // horizontal line 
       hr{
-        width: 3.8rem!important;
-        margin-left: 1em;
-        width: 4rem;
+        background-color: $aColorHover;
+        height: .14rem;
+        width: 2.6rem;
+        display: inline-block;
+        margin-right: .2em;
       }
-      button#send {
-        width: 10rem;
+      // 'have a project title' style
+      h1#project{
+        color: $h4Color!important;
+        margin-left: .5em;
+        opacity: .6;
+        margin-top: -.4em;
       }
     }
-      
-      @media (min-width:760px) and (max-width:991px) {
-        #title h1#project {
-          margin-left: 3em;
+
+    // container 
+    .container{
+      padding: 29px;
+      color: #747577;
+
+        p{
+          font-size: 19px;
+          line-height: 1.5;
+          font-weight: normal;
+          font-family: 'Segoe UI', Tahoma, sans-serif;
+          // opacity: .6;
+          color: $h4Color;
+          margin: 1em 0;
         }
+
+        p.subText{
+          margin-left: 1em;
+        }
+        // form 
         form{
-          width: 90%;
-          margin: 0 auto;
+          margin-top: 2em;
         }
+
+        .form-control{
+          background-color: $body;
+          border: none;
+          border-bottom: 2px solid $linkColor;
+          outline: none;
+          box-shadow: none;
+          color: $h4Color;
+        }
+
+        textarea{
+          border-radius: 5px;
+        }
+
+        // input 
+        input{
+          padding-top: 1rem;
+          padding-bottom: .5rem;
+          margin-bottom: 1.4em;
+          color: $h4Color;
+        }
+
+        // send button 
+        button#send{
+          background:  $linkColor;
+          border: none;
+          color: white;
+          width: 6rem;
+          padding: .5rem 0;
+          border-radius: 10px;
+          margin-top: 2em;
+          margin-bottom: .5em;
+        
+          // button active state 
+          &:hover, &:active{
+            background: $cvHover;
+            transition: all 0.9s ease 0s;
+          }
+        } 
+
+        #left{
+          display: none;
+        }
+
+        .forDesktop{
+          display: none;
+        }
+
+        .footer-links{
+          display: flex;
+          justify-content: space-between;
+          width: 15rem;
+          margin:1em auto;
+          padding-bottom: 1rem;
+        }
+      }
+
+        @media (min-width:600px) {
+          #title{
+            padding-left: 3rem;
+          }
+
+          #title h1.title {
+            font-size: 40px;
+          }
+
+          h1#project{
+            font-size: 45px!important;
+            margin-left: 1.5em;
+          }
+
+          hr{
+            width: 3.8rem!important;
+            margin-left: 1em;
+            width: 4rem;
+          }
+
+          button#send {
+            width: 10rem;
+          }
+        }
+          
+        @media (min-width:760px) and (max-width:991px) {
+          #title h1#project {
+            margin-left: 3em;
+          }
+
+          form{
+            width: 90%;
+            margin: 0 auto;
+          }
       }
 
       @media (min-width:992px) {
@@ -1182,54 +1090,20 @@ h4{
           overflow-x: hidden;
           background: #bebdbd;
         }
-        // link to about page on desktop
-        // #desktop{
-        //   display: block!important;
-        // }
 
-        // link to about page on mobile 
-        // #mobile{
-        //   display: none!important;
-        // }
-      
-        .me-auto {
-          margin-right: 0!important;
-        }
-
-        div#links li{
-          float: left;
-          padding: 0 .5rem;
-        }
-
-        .navbar{
-          align-items: unset!important;
-        }
-        // Navlinks
-        #navbarTogglerDemo02{
-          display: flex!important;
-          flex-direction: column;
-          position: relative;
-          top: 0;
-          padding: 0;
-          height: 0;
-        }
-        #navbarTogglerDemo02 ul{
-          float: left;
-          padding: 0 10px;
-        }
-        .toggle-links{
-          display: none;
-        }
         #title{
           padding-left: 1.2rem;
           max-width: 960px;
         }
+
         #title h1#getInTouch{
           font-size: 45px;
         }
+
         #title h1#project{
           font-size: 55px!important;
         }
+
         hr{
           width: 6rem!important;
           margin-left: 5em;
@@ -1240,12 +1114,15 @@ h4{
           #title{
             max-width: 1120px;
           }
+
           #title h1#getInTouch{
             font-size: 70px;
           }
+
           #title h1#project{
             font-size: 70px!important;
           }
+
           hr{
             width: 6rem!important;
             margin-left: 5em;
@@ -1254,12 +1131,11 @@ h4{
         }
 
         .container{
-            display: flex;
-            justify-content: space-between;
-            padding: 0;
-            // margin: 0 -5em 0 0;
-            height: 100vh;
-          }
+          display: flex;
+          justify-content: space-between;
+          padding: 0;
+          height: 100vh;
+         }
           @media (min-width:1400px){
             .container, 
             .container-lg, 
@@ -1268,7 +1144,7 @@ h4{
             .container-xl, 
             .container-xxl {
               max-width: 1120px;
-          }
+            }
           }
          
           .contentt-left{
@@ -1276,36 +1152,32 @@ h4{
             width: 50%;
             margin: 0 0 0 1em;
             padding: 1rem 2rem ;
-            
           }
+
           .left{
-              width: 100%;
+            width: 100%;
           }
+
           p.subText {
             margin-left: 0;
-        }
+          }
           @media (min-width:1033px){
             .left{
-                width: 100%;
+              width: 100%;
             }
           }
 
 
           .contentt-right{
-        //     background-image: url('./Images/contact.jpg');
-        //     background-repeat: no-repeat;
-        //     background-size: cover;
-        //     background-position: 50% 30%;
-        //     background-color: rgb(39, 39, 39);
-        //     background-blend-mode: luminosity;
             width: 35%;
             margin: 0 auto;
             p{
               margin-top: 2em;
             }
           }
+
           .forDesktop{
-            display: block;
+            display: block !important;
           }
         
           .footer-links{
@@ -1313,6 +1185,6 @@ h4{
             margin:2em auto 1em;
           }
           
-    }
+      }
 }
 
