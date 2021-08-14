@@ -200,6 +200,10 @@ h4 {
   padding-left: .5rem;
 }
 
+.home-page nav {
+  position: fixed;
+}
+
 .home-page .top-container {
   background-image: url(./Images/background.jpg);
   background-repeat: no-repeat;
@@ -312,8 +316,8 @@ h4 {
 
 .home-page #about-me {
   color: #a5a5a8;
-  background-color: #0a0a0a;
-  padding: 1rem;
+  background-color: #0a0a0a !important;
+  padding: 1rem 0;
   text-align: left;
   width: 90%;
   margin-inline: auto;
@@ -331,6 +335,7 @@ h4 {
   display: grid;
   width: 95%;
   margin: 0 auto;
+  font-size: 1.25em;
 }
 
 .home-page #about-me .about-sections div.skill {
@@ -339,6 +344,14 @@ h4 {
 
 .home-page #about-me .about-sections h1, .home-page #about-me .about-sections h5 {
   font-weight: bolder;
+}
+
+.home-page #about-me .about-sections h5 {
+  font-size: 1.45rem;
+}
+
+.home-page #about-me .about-sections h6 {
+  font-size: 1.25rem;
 }
 
 .home-page #about-me .about-sections h3 span {
@@ -662,7 +675,7 @@ h4 {
 }
 
 .portfolio footer {
-  background: #000;
+  background: #000 !important;
   padding-top: 1rem;
 }
 
@@ -731,8 +744,8 @@ h4 {
 
 .about #about-me {
   color: #a5a5a8;
-  background-color: #0a0a0a;
-  padding: 1rem;
+  background-color: #0a0a0a !important;
+  padding: 1rem 0;
   text-align: left;
   width: 90%;
   margin-inline: auto;
@@ -922,7 +935,7 @@ h4 {
 .contact .container button#send {
   background: #646468;
   border: none;
-  color: white;
+  color: #fff;
   width: 6rem;
   padding: .5rem 0;
   border-radius: 10px;

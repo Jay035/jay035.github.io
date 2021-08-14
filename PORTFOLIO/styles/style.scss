@@ -1,19 +1,20 @@
 $navBackground:#181818!important;
 $toggleColor:#ffffff8c;
-$toggleBackground:#181818;
+// $toggleBackground:#181818;
 $linkColor:#646468;
 $aColor:rgb(216, 214, 214);
 $aColorHover:#fff;
 $body:#0a0a0a!important;
+$dark:#000 !important;
+$boxShadow:#111111;
+$textShadow:#49574f;
 $mainBackground:#444444;
 $mainTextColor:whitesmoke;
-$bottomTextColor:#676768;
+// $bottomTextColor:#676768;
 $h4Color:#a5a5a8;
 $buttonColor:#16161a;
-$cvColor:#fff;
 $cvHover:#505052;
-$scrollBackground: #101;
-$typewriterSpeed:6s;
+// $typewriterSpeed:6s;
 
 // Global styles
 html{
@@ -217,6 +218,9 @@ h4{
 
 // Home page 
 .home-page{
+  nav{
+    position: fixed;
+  }
     
     // Top container 
      .top-container{
@@ -243,7 +247,7 @@ h4{
       
       span{
         font-size: 1em;
-        color: $cvColor;
+        color: $aColorHover;
       }
 
       h2{
@@ -339,7 +343,7 @@ h4{
         width: 40%;
         font-weight: 500;
         background: $buttonColor;
-        color: $cvColor;
+        color: $aColorHover;
         display: block;
         
         &:hover{
@@ -372,8 +376,8 @@ h4{
   // About page 
     #about-me{
       color: $h4Color;
-      background-color: #0a0a0a;
-      padding: 1rem;
+      background-color: $body;
+      padding: 1rem 0;
       text-align: left;
       width: 90%;
       margin-inline: auto;
@@ -389,6 +393,7 @@ h4{
         display: grid;
         width: 95%;
         margin: 0 auto;
+        font-size: 1.25em;
 
         div.skill{
           margin-top: 1em;
@@ -397,8 +402,17 @@ h4{
         h1,h5{
           font-weight: bolder;
         }
+        h5 {
+          font-size: 1.45rem;
+        }
+
+        h6{
+          font-size: 1.25rem;
+        }
+
+
         h3 span{
-          color: whitesmoke;
+          color: $mainTextColor;
           font-size: calc(1.3rem + .6vw);
         }
 
@@ -652,9 +666,9 @@ h4{
   // Portfolio page
 .portfolio{
   font-family: 'Montserrat', serif;
-  background-color: #000 !important;
+  background-color: $dark;
     .bg-dark {
-      background-color: #000 !important;
+      background-color: $dark;
     }
     // Main section 
     
@@ -711,7 +725,7 @@ h4{
           width: 100%;
           background: #111111;
           padding: .5rem .8rem;
-          box-shadow: 4px 4px 8px #111111;
+          box-shadow: 4px 4px 8px $boxShadow;
 
           p{
             margin-bottom: 0;
@@ -734,7 +748,7 @@ h4{
 
     // footer
     footer{
-      background: #000;
+      background: $dark;
       padding-top: 1rem;
       // padding-top: 1.5rem;
     }
@@ -817,8 +831,8 @@ h4{
     
     #about-me{
       color: $h4Color;
-      background-color: #0a0a0a;
-      padding: 1rem;
+      background-color: $body;
+      padding: 1rem 0;
       text-align: left;
       width: 90%;
       margin-inline: auto;
@@ -853,7 +867,7 @@ h4{
         }
 
         h3 span{
-          color: whitesmoke;
+          color: $mainTextColor;
           font-size: calc(1.3rem + .6vw);
         }
 
@@ -950,7 +964,7 @@ h4{
         padding:0 1rem .1rem 0;
         font-size:36px; 
         color: #e5e6e6!important;
-        text-shadow: 2px 0 0 #49574f;
+        text-shadow: 2px 0 0 $textShadow;
       }
 
       // horizontal line 
@@ -980,7 +994,6 @@ h4{
           line-height: 1.5;
           font-weight: normal;
           font-family: 'Segoe UI', Tahoma, sans-serif;
-          // opacity: .6;
           color: $h4Color;
           margin: 1em 0;
         }
@@ -1018,7 +1031,7 @@ h4{
         button#send{
           background:  $linkColor;
           border: none;
-          color: white;
+          color: $aColorHover;
           width: 6rem;
           padding: .5rem 0;
           border-radius: 10px;
