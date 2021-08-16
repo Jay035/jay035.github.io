@@ -262,7 +262,7 @@ h4 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: .5em auto .5em 0;
+  margin: .5em auto .5em;
   width: 40%;
   font-weight: 500;
   background: #16161a;
@@ -549,6 +549,7 @@ h4 {
     margin: 1.5rem 0;
   }
   .home-page .buttons button {
+    margin: .5em auto .5em 0 !important;
     width: 38%;
   }
   .home-page .about-sections {

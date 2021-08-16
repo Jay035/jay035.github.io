@@ -340,7 +340,7 @@ h4{
         border: none;
         padding: .5rem ;
         align-items: center;
-        margin: .5em auto .5em 0;
+        margin: .5em auto .5em ;
         width: 40%;
         font-weight: 500;
         background: $buttonColor;
@@ -617,6 +617,7 @@ h4{
       }
 
       .buttons button{
+        margin: .5em auto .5em 0 !important;
         width: 38%;
       }
 
