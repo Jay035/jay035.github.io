@@ -25,7 +25,7 @@ body{
   margin: 0;
   overflow-y: scroll;
   overflow-x: hidden;
-  font-family: 'Libre Baskerville', serif;
+  font-family: 'Montserrat', serif;
   background-color: $body;
   line-height: 2;
 }
@@ -237,7 +237,7 @@ h4{
         left: 0;
         z-index: 1;
         width: 100%;
-        height: 100vh;
+        // height: 75vh;
         padding: 1rem; 
       @media (max-width:767px){
         .text{
@@ -393,7 +393,7 @@ h4{
         display: grid;
         width: 95%;
         margin: 0 auto;
-        font-size: 1.25em;
+        font-size: 1.05em;
 
         div.skill{
           margin-top: 1em;
@@ -404,10 +404,12 @@ h4{
         }
         h5 {
           font-size: 1.45rem;
+          color: $aColorHover;
+          opacity: .7;
         }
 
         h6{
-          font-size: 1.25rem;
+          font-size: 1rem;
         }
 
 
@@ -848,7 +850,6 @@ h4{
         display: grid;
         width: 95%;
         margin: 0 auto;
-        font-size: 1.25rem;
 
         div.skill{
           margin-top: 1em;
@@ -863,7 +864,7 @@ h4{
         }
 
         h6{
-          font-size: 1.25rem;
+          font-size: 1.05rem;
         }
 
         h3 span{
