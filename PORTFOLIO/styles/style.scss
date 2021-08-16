@@ -339,7 +339,8 @@ h4{
       .buttons button{
         border: none;
         padding: .5rem ;
-        margin: .5em auto .5em ;
+        align-items: center;
+        margin: .5em auto .5em 0;
         width: 40%;
         font-weight: 500;
         background: $buttonColor;
@@ -616,7 +617,7 @@ h4{
       }
 
       .buttons button{
-        width: 40%;
+        width: 38%;
       }
 
       .about-sections{

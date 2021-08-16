@@ -259,7 +259,10 @@ h4 {
 .home-page .top-container .buttons button {
   border: none;
   padding: .5rem;
-  margin: .5em auto .5em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: .5em auto .5em 0;
   width: 40%;
   font-weight: 500;
   background: #16161a;
@@ -546,7 +549,7 @@ h4 {
     margin: 1.5rem 0;
   }
   .home-page .buttons button {
-    width: 40%;
+    width: 38%;
   }
   .home-page .about-sections {
     display: -ms-grid;
