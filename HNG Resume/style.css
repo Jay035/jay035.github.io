@@ -1,0 +1,641 @@
+:root{
+    --white:#fff;
+    --purple:#800080;
+    --dark:#0b0b0c;
+    --scroll-down:rgba(255, 255, 255,0.7);
+    --grey:#eeeeee;
+    --black:#000;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    overflow-x:hidden;
+    
+}
+
+a{
+    text-decoration: none;
+}
+
+/* sections */
+#about-me, #experience,#internship, #works, #contact{
+    padding:2rem;
+    line-height: 2;
+}
+
+/* section title  */
+.title{
+    color:var(--purple);
+    text-transform:uppercase;
+    text-align: center;
+}
+
+hr{
+    width: 13rem;
+}
+
+img{
+    width: 60%;
+}
+
+/* hero-section */
+.hero-section{
+    background-color: var(--dark);
+    padding: 4rem 2rem 7rem;
+    color:var(--white);
+}
+
+.hero-section h3{
+    font-size: 1.2rem;
+    color: #c83cb9;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    position: relative;
+    padding-left: 80px;
+    margin-left: -30px;
+    margin-bottom: 0.6rem;
+}
+
+.hero-section h3::before{
+    display: block;
+    content: '';
+    width: 60px;
+    height: 2px;
+    background-color: var(--purple);
+    margin-top: -1.5px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+}
+
+.hero-section h1{
+    font-size: 2.5rem;
+    font-family: 'Lato', sans-serif;
+}
+
+.links{
+    margin-left: 6em;
+    display:flex;
+}
+
+.links a{
+    margin: .5em .3em;
+}
+
+.buttons{
+    margin-bottom:4em;
+}
+
+button{
+    width:17.5rem;
+    padding:.8rem .8rem;
+    margin:.8em auto .8em;
+    border:2.5px solid #fff;
+    background: transparent;
+    display:block;
+    outline:none;
+    cursor: pointer;
+}
+
+button:hover{
+    background: var(--purple);
+    transition:all 0.4s ease-in-out;
+    border:none;
+}
+
+button a{
+    color:var(--white);
+    text-align:center;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+button a:hover{
+    color:var(--white);
+}
+
+button a:active{
+    color:var(--white);
+}
+
+/* scroll down anchor link */
+.scroll-btn{
+    background: transparent -webkit-gradient(linear, left top, right top, from(transparent), to (transparent), color-stop(0.5, #fff) 0 0 no-repeat);
+    background-image: -webkit-linear-gradient(-40deg, transparent 0%, transparent 40%, #fff 50%,  transparent 60%, transparent 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-animation-name: shine;
+    animation-name: shine;
+    -webkit-animation-duration: 5s;
+    animation-duration: 5s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+/* animation */
+@keyframes shine{
+    0%, 10%{
+        background-position: -1000px;
+    }
+    20%{
+        background-position: top left;
+    }
+    90%{
+        background-position: top right;
+    }
+    100%{
+        background-position: 1000px;
+    }
+}
+
+/* scroll-down anchor link  */
+a#about{
+    color: var(--scroll-down);
+    text-transform: uppercase;
+    font-size: .8rem;
+}
+
+#about-me .title,#about-me .sub-title{
+    text-align:center;
+}
+
+#about-me .title{
+    margin-bottom: 0;
+}
+
+#about-me p{
+    opacity: .8;
+}
+
+p.sub-title{
+    margin-top: 0;
+}
+
+/* skills div */
+#skills div{
+    background:var(--grey);
+    width:fit-content;
+    margin:.5em;
+    padding:.5rem;
+    display:inline-block;
+    font-size:.9rem;
+}
+
+/* experience div */
+#experience{
+    background-color: var(--grey);
+}
+
+#experience h1{
+    font-size: 1.8rem;
+}
+
+ul li{
+    opacity: .8;
+}
+
+span{
+    opacity: .9;
+}
+
+#certifications ul li a:hover{
+    color: var(--purple) !important;
+}
+
+/* internships  section  */
+.images{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* works section */
+#works{
+    background-color: var(--grey);
+    margin-top: 4em;
+    text-align: center;
+}
+
+/* info */
+.square{
+    background-color: var(--white);
+    padding:1.8rem 1.3rem 1.2rem;
+    margin: 2em 0;
+    border-radius: 5px;
+}
+
+/* info title */
+.square p.title{
+    color: var(--black);
+    font-weight: bold;
+}
+
+.square p.subInfo{
+    opacity: .8;
+}
+
+.square button{
+    background-color: var(--purple);
+}
+
+
+/* contact section */
+#contact{
+    /* text-align: center; */
+    background-color: var(--dark);
+    color: var(--white);
+}
+
+#contact .title{
+    margin-bottom: 0;
+}
+
+#contact h1{
+    margin-top: -.5em;
+    opacity: .9;
+}
+
+#contact p{
+    opacity: .7;
+}
+.center{
+    text-align: center;
+}
+input, textarea{
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #eeeeee;
+    width: 100%;
+    padding: 1rem 0;
+    outline: none;
+    color: var(--white);
+}
+textarea{
+    height: 100px;
+    width: 300px;
+    margin-bottom: 1.5em;
+}
+
+form button{
+    border: none;
+    background-color: var(--purple);
+    color: var(--white);
+    text-transform: uppercase;
+}
+
+#contact h5, #contact p#tel{
+    text-align: left;
+}
+#contact h5{
+    margin: 3em 0 0;
+}
+#contact p#tel{
+    margin: 0 !important;
+}
+
+/* Mobile screen sizes */
+@media (max-width: 500px){
+    .hero-section h3 {
+        font-size: 1.1rem !important;
+    }
+    .hero-section h3::before{
+        width: 50px;
+    }
+    .hero-section h1{
+        font-size: 2.3rem;
+    }
+}
+
+/* Tablets screen size and above */
+@media (min-width:768px){
+    /* Global styles */
+    p{
+        font-size: 1.4em;
+    }
+    /* hero-section */
+    .hero-section {
+        padding: 12rem 2rem ;
+    }
+
+    .hero-section div{
+        width: 70%;
+        margin-inline: auto;
+        padding-right: 2rem;
+    }
+
+    .hero-section h3{
+        padding-left: 80px !important;
+    }
+
+    div.buttons{
+        display: flex;
+        justify-content: space-between;
+        margin-inline: 0 ;
+    }
+    
+    button{
+        display: flex;
+        margin-right: 2em;
+        width: 18.6rem;
+    }
+
+    button a{
+        width: fit-content;
+        margin-inline: auto;
+        font-size: 1.1rem;
+    }
+
+    /* scroll down anchor link div*/
+    div.scroll-btn{
+        margin-inline: 0 !important;
+    }
+
+    /* scroll down anchor link  */
+    a#about{
+        font-size: 1.3rem;
+    }
+
+    .title,#experience h1{
+        font-size: 3em;
+    }
+
+    /* sections  */
+    #about-me, #experience, #internship, #works, #contact{
+        padding: 2rem 3.5rem;
+    }
+
+    /* About me */
+    p.sub-title{
+        font-size: 1.2em;
+    }
+
+    /* skill div */
+    #skills{
+        padding-bottom: 2rem;
+    }
+
+    #skills h2{
+        font-size: 1.7em;
+    }
+
+    #skills div{
+        padding: 1rem;
+    }
+
+    /* experience div */
+    #experience{
+        padding: 2rem 5.5rem;
+    }
+
+    #experience h2.title{
+        font-size: 2em;
+    }
+
+    /* internships div*/
+    .images{
+        padding-top: 1rem;
+    }
+    img{
+        width: 60%;
+    }
+    img#zuri{
+        width: 45%;
+    }
+
+    /* works div */
+    #works h1{
+        margin-bottom: 0;
+    }
+
+    #works p{
+        margin-top: 0;
+        position: relative;
+        padding-bottom: 3rem;
+    }
+
+    #works p.subtitle::after{
+        display: block;
+        content: '';
+        width: 350px;
+        height: 2px;
+        background-color: var(--dark);
+        opacity: .3;
+        position: absolute;
+        left: 6em;
+        top: 90%;
+
+    }
+}
+@media (max-width:800px){
+    .hero-section h3{
+        padding-left: 60px;
+        margin-left: -10px;
+    }
+    .links{
+        display: none;
+    }
+}
+
+
+
+/* body{
+    margin: 0;
+    padding:0 ;
+    font-family: 'Open Sans', sans-serif;
+}
+header{
+    background-color:#326c81;
+    color: white;
+    padding: 1rem ;
+    text-align: center;
+}
+nav,.body{
+    animation: fadeIn 3s ease-in-out;
+}
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+        transform: translateX(-2em);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+h1{
+    padding:0 0 0 .7rem;
+    font-weight: bolder;
+    font-size: 30px;
+    font-family: 'Playfair Display', serif;
+}
+h2{
+    display: none;
+}
+
+ul{
+    padding: 0;
+}
+li{
+    list-style-type: none;
+    font-size: 1rem;
+    margin-bottom: .5em;
+}
+
+li::before{
+    content: '- ';
+}
+.info{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    color: #fff;
+}
+.top-info{
+    margin-bottom: 1em;
+}
+svg{
+    width: 12px;
+    margin-left: 1em;
+}
+
+span{
+    margin-right: 0;
+    padding-left:0.1em ;
+}
+img{
+    width: 13px;
+    height: 10px; 
+}
+a{
+    color: #fff!important;
+    text-decoration: none;
+    cursor: pointer;
+}
+a:hover{
+    text-decoration: underline;
+}
+[class="fa fa-phone"]{
+    margin-left: -1.9em;
+    margin-right: -1em;
+}
+.header{
+    font-style: normal;
+}
+
+.body{
+    margin: 1.5em;
+}
+.header > span{
+    color: #326c81;
+}
+hr{
+    color: #326c81;
+}
+h4{
+    font-weight: normal;
+    line-height: 1.5;
+}
+p{
+    font-weight: normal;
+    line-height: 1.4;
+}
+.header{
+    margin-top: 2em;
+}
+.content{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: .5em;
+}
+.content h4{
+    font-weight: bolder;
+ } 
+
+.education .content p{
+    margin: 0 0 .4em 0;
+}
+
+@media (min-width:768px) {
+    body{
+        max-width: 600px;
+        margin:0 auto 1em;
+        box-shadow: 2px 1px 2px 2px #ccc;
+        padding:0 6rem 1rem 0;
+    }
+    header{
+        margin-top: 1.5em ;
+        padding:1rem 3rem ;
+        width: 100%;
+    }
+    h1{
+        width: 90%;
+        margin:1em auto 1em;
+        padding:1.8rem 0  ;
+        font-weight: bolder;
+        font-size: 46px;
+        text-align: center;
+        border: 1px solid #fff;
+        border-width: 7px;
+    }
+    h2{
+        width: 50%;
+        border: 1px solid #fff;
+        background-color: #fff;
+        color: #2e3d60;
+        text-align: center!important;
+        padding: .7rem;
+        margin:-3em auto;
+        display: flex;
+        justify-content: center;
+    }
+    .body{
+        width: 100%;
+       
+    }
+    .info{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        margin-left:0 ;
+        margin-top: 4.2em;
+        font-size: 22px;
+        color: #fff;
+    }
+    svg{
+        width: 12px;
+        margin-left: 1em;
+    }
+    a{
+        color: #fff;
+    }
+    .body{
+        margin: 2.5em;
+        padding:0 ;
+        display: flex;
+    }
+    .header{
+        font-size: 16px;
+        font-weight: bolder;
+    }
+    .left{
+        width: 50%;
+        margin-right: 1em;
+    }
+    .right{
+        width: 50%;
+        margin-left: 1em;
+    }
+    h4{
+        font-weight: normal;
+        line-height: 1.5;
+    }
+    
+}
+
+
+ */
