@@ -18,6 +18,9 @@ https://jay035.github.io/Google%20Homepage/
 Responsive Design task by Zuri
 https://jay035.github.io/RD/
 
+Résumé task by HNG
+https://jay035.github.io/HNG%20Resume/
+
 Testimonials
 https://jay035.github.io/Testimonials/
 
