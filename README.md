@@ -3,6 +3,9 @@
 Portfoilo website
 https://jay035.github.io/PORTFOLIO/
 
+PrintName with JS
+https://jay035.github.io/PrintName/
+
 AltSignals
 https://jay035.github.io/AltSignals/
 
