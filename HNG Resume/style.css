@@ -39,7 +39,8 @@ hr{
 }
 
 img{
-    width: 60%;
+    width: 40%;
+    margin-inline: auto;
 }
 
 /* hero-section */
@@ -78,12 +79,13 @@ img{
 }
 
 .links{
-    margin-left: 6em;
-    display:flex;
+    /* margin-left: 18em; */
+    display: flex;
+    flex-direction: column;
 }
 
 .links a{
-    margin: .5em .3em;
+    margin: .3em;
 }
 
 .buttons{
@@ -103,7 +105,7 @@ button{
 
 button:hover{
     background: var(--purple);
-    transition:all 0.4s ease-in-out;
+    transition:all 0.4s ease-in 0.1s;
     border:none;
 }
 
@@ -135,6 +137,7 @@ button a:active{
     -webkit-animation-iteration-count: infinite;
     animation-iteration-count: infinite;
 }
+
 /* animation */
 @keyframes shine{
     0%, 10%{
@@ -156,6 +159,10 @@ a#about{
     color: var(--scroll-down);
     text-transform: uppercase;
     font-size: .8rem;
+}
+
+a#about:hover{
+    color: var(--purple);
 }
 
 #about-me .title,#about-me .sub-title{
@@ -219,6 +226,24 @@ span{
     text-align: center;
 }
 
+#works p{
+    position: relative;
+    /* padding-bottom: 3rem; */
+}
+
+/* horizontal line after works' subtitle
+#works p.subtitle::after{
+    display: block;
+    content: '';
+    width: 250px;
+    height: 2px;
+    background-color: var(--dark);
+    opacity: .3;
+    position: absolute;
+    left: 3.5em;
+    top: 80%;
+} */
+
 /* info */
 .square{
     background-color: var(--white);
@@ -227,18 +252,33 @@ span{
     border-radius: 5px;
 }
 
+/* works images */
+.square img{
+    padding-top: 3rem;
+    width: 90% !important;
+}
+
 /* info title */
 .square p.title{
+    font-size: 1.3rem;
     color: var(--black);
     font-weight: bold;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
 }
 
 .square p.subInfo{
     opacity: .8;
+    padding-bottom: 0 !important;
 }
 
 .square button{
     background-color: var(--purple);
+    text-align: center;
+    letter-spacing: 2px;
+    border: none;
+    width: 17rem;
+    padding-bottom: 1rem;
 }
 
 
@@ -275,8 +315,8 @@ input, textarea{
 }
 textarea{
     height: 100px;
-    width: 300px;
-    margin-bottom: 1.5em;
+    width: 360px;
+    margin-bottom: 3em;
 }
 
 form button{
@@ -284,14 +324,17 @@ form button{
     background-color: var(--purple);
     color: var(--white);
     text-transform: uppercase;
+    text-align: center;
 }
 
 #contact h5, #contact p#tel{
     text-align: left;
 }
+
 #contact h5{
     margin: 3em 0 0;
 }
+
 #contact p#tel{
     margin: 0 !important;
 }
@@ -399,13 +442,15 @@ form button{
         padding-top: 1rem;
     }
     img{
-        width: 60%;
-    }
-    img#zuri{
-        width: 45%;
+        width: 40%;
+        margin-inline: auto;
     }
 
     /* works div */
+    #works{
+        padding: 2rem 4rem;
+    }
+
     #works h1{
         margin-bottom: 0;
     }
@@ -413,21 +458,82 @@ form button{
     #works p{
         margin-top: 0;
         position: relative;
-        padding-bottom: 3rem;
+        padding-bottom: .5rem;
     }
 
-    #works p.subtitle::after{
-        display: block;
-        content: '';
-        width: 350px;
-        height: 2px;
-        background-color: var(--dark);
-        opacity: .3;
-        position: absolute;
-        left: 6em;
-        top: 90%;
-
+    /* works sections */
+    .square{
+        padding: 2rem 3rem 1.2rem;
     }
+
+    /* works images */
+    .square img{
+        padding-top: 3rem;
+        width: 80%;
+    }
+
+    /* works info */
+    .square .info{
+        margin-top: 2em;
+    }
+
+    /* info title */
+    .square p.title{
+        font-size: 1.7rem;
+        padding-bottom: 0 !important;
+        margin-bottom: 0;
+    }
+
+    /* see live button */
+    .square button{
+        margin-inline: auto;
+        width: 25rem;
+    }
+
+    /* Contact */
+    #contact{
+        padding: 2rem 4rem;
+    }
+
+    #contact .title{
+        font-size: 2em;
+    }
+
+    #contact h1.center{
+        font-size: 3em;
+        margin-bottom: 0 !important;
+    }
+
+    #contact p.center{
+        margin-top: 0;
+    }
+
+    input,textarea{
+        font-size: 1rem !important;
+    }
+
+    textarea{
+        width: 645px;
+    }
+
+    /* contact button */
+    form button{
+        margin-inline: auto;
+        padding: 1rem;
+        width: 22rem;
+        justify-content: center;
+        font-size: 1.1rem;
+    }
+
+    #contact h5{
+        font-size: 1.2rem;
+    }
+
+    #contact p#tel{
+        font-size: 1rem;
+    }
+
+
 }
 @media (max-width:800px){
     .hero-section h3{
@@ -439,6 +545,137 @@ form button{
     }
 }
 
+@media (min-width:1000px){
+    /* Global styles */
+    p{
+        font-size:1.1em;
+    }
+
+    section.grid{
+        display:grid;
+        grid-template-columns:auto auto;
+        grid-gap:50px;
+    }
+
+    #works > section,.contact > section{
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+
+    /* hero-section */
+    .hero-section {
+        padding: 8rem 1rem 12rem 1rem ;
+    }
+
+    .hero-section h3{
+        margin-top: 4em;
+    }
+
+    .hero-section h1{
+        width: 68%;
+        font-size: 3.5rem;
+    }
+
+    div.buttons{
+        display: block;
+        margin-top: -10em;
+        margin-left: auto;
+        margin-right: -7em;
+    }
+
+    button{
+        display: block;
+        margin-right: 0;
+        margin-bottom: 2em;
+        width: 18.6rem;
+        padding:.8rem;
+    }
+
+    .links{
+        float: right;
+        position: absolute;
+        left: 93%;
+        top: 40%;
+    }
+
+    /* sections */
+    #about-me, #experience, #internship, #works, #contact {
+        padding: 2rem 7rem;
+    }
+
+    /* skills section */
+    #skills h2{
+        font-size:1.5em;
+    }
+
+    #skills div{
+        opacity: .9;
+    }
+
+    /* internships  section  */
+    .images{
+        display: flex;
+        justify-content: space-between;
+        width: 70%;
+        margin-inline: auto;
+    }
+
+    .images img{
+        width: 45%;
+    }
+    
+
+    /* works section */
+    #works{
+        padding: 2rem 4rem;
+    }
+
+    #works > section > div {
+        width: 78%;
+        margin-inline: auto;
+    }
+
+    #works .square p.title {
+        font-size: 1.4em;
+    }
+
+    #works .square p{
+        font-size: 1em;
+    }
+
+    /* see live link */
+    #works .square button a{
+        font-size: 1rem;
+    }
+
+    /* contact section */
+    .contact{
+        width: 80%;
+        margin-inline: auto;
+    }
+
+    .contact > section{
+        padding-top: 2rem;
+    }
+
+    input, textarea{
+        width: 80%;
+    }
+
+    form button{
+        padding-left: 0;
+        margin-left: 0;
+    }
+}
+
+@media (min-width: 1300px){
+    /* contact */
+    form button{
+        padding-left: 0;
+        margin-left: 0;
+        width: 30rem;
+    }
+}
 
 
 /* body{
