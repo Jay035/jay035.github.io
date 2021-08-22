@@ -5,6 +5,8 @@
     --scroll-down:rgba(255, 255, 255,0.7);
     --grey:#eeeeee;
     --black:#000;
+    --animationDuration:0.3s;
+    --transitionDuration:0.8s;
 }
 html{
     scroll-behavior: smooth;
@@ -42,12 +44,28 @@ img{
     width: 40%;
     margin-inline: auto;
 }
+/* animation for first two sections */
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
 
 /* hero-section */
 .hero-section{
     background-color: var(--dark);
     padding: 4rem 2rem 7rem;
     color:var(--white);
+}
+.hero-section .hero{
+    animation: fadeIn var(--animationDuration) ease-in-out;
+    transition: all var(--transitionDuration) ;
 }
 
 .hero-section h3{
@@ -169,6 +187,12 @@ a#about:hover{
     text-align:center;
 }
 
+/* About section */
+#about-me{
+    animation: fadeIn var(--animationDuration) ease-in-out;
+    transition: all var(--transitionDuration) ;
+}
+
 #about-me .title{
     margin-bottom: 0;
 }
@@ -194,6 +218,8 @@ p.sub-title{
 /* experience div */
 #experience{
     background-color: var(--grey);
+    animation: fadeIn var(--animationDuration) ease-in-out;
+    transition: all var(--transitionDuration) ;
 }
 
 #experience h1{
@@ -217,6 +243,9 @@ span{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    animation: fadeIn var(--animationDuration) ease-in-out;
+    transition: all var(--transitionDuration) ;
+
 }
 
 /* works section */
@@ -224,6 +253,18 @@ span{
     background-color: var(--grey);
     margin-top: 4em;
     text-align: center;
+    animation: fadeDown var(--animationDuration) ease-in-out;
+    transition: all var(--transitionDuration) ;
+}
+@keyframes fadeDown {
+    from{
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
 }
 
 #works p{
@@ -287,6 +328,9 @@ span{
     /* text-align: center; */
     background-color: var(--dark);
     color: var(--white);
+    animation: fadeIn var(--animationDuration) ease-in-out;
+    transition: all var(--transitionDuration) ;
+
 }
 
 #contact .title{
