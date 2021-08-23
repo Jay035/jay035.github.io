@@ -62,7 +62,7 @@ nav{
 }
 @media (max-width:500px){
   #logo{
-    width: 40% !important;
+    width: 45% !important;
   }
 }
 @media (min-width:500px){
@@ -70,7 +70,7 @@ nav{
     width: 20% !important;
   }
 }
-@media (max-width:992px){
+@media (min-width:992px){
   #logo{
     width: 15%;
   }
@@ -78,6 +78,10 @@ nav{
 
 .container-fluid{
   height: 3.2rem;
+}
+
+.navbar-brand {
+  padding-bottom: .7rem;
 }
 
 .navbar{
