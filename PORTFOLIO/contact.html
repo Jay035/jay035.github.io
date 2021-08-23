@@ -26,9 +26,9 @@
 <body class="contact">
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="nav">
     <div class="container-fluid">
-      
-        <h1 style="padding-top:.4rem;color:rgb(216, 214, 214);text-decoration: none; font-family: 'Orelega One', cursive;font-size: 40px;">C</h1>
-     
+      <a class="navbar-brand" href="index.html">
+        <img src="./styles/Images/logo.png" alt="logo" id="logo">
+      </a>
         <button id="hamburger" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
           <span class="bar"></span>
           <span class="bar"></span>
@@ -94,14 +94,14 @@
             <form id="form" action="https://formspree.io/f/xleabgbj" method="POST" >
               <div class="info">
                 <div class="">
-                  <input class="form-control" placeholder="Your First name"  id="FirstName" name="FirstName">
+                  <input class="form-control text" placeholder="Your First name"  id="FirstName" name="FirstName">
                 </div>
                 <div class="">
-                  <input class="form-control" placeholder="Your Last name"  id="LastName" name="LastName" >
+                  <input class="form-control text" placeholder="Your Last name"  id="LastName" name="LastName" >
                 </div>
               </div>
-              <input style="display: block;" class="form-control" placeholder="Your email" id="email" name="email" type="email" >   
-              <textarea name="message" class="form-control" id="message" rows="2" cols="40" placeholder="Write your Message here"></textarea>
+              <input style="display: block;" class="form-control text" placeholder="Your email" id="email" name="email" type="email" >   
+              <textarea name="message" class="form-control text" id="message" rows="2" cols="40" placeholder="Write your Message here"></textarea>
               <!-- Button trigger modal -->
               <button id="send" type="submit"> Send</button>
             </form>

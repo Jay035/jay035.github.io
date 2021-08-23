@@ -30,6 +30,42 @@ nav {
   font-family: 'Montserrat', serif;
 }
 
+.navbar > .container, .navbar > .container-fluid, .navbar > .container-lg, .navbar > .container-md, .navbar > .container-sm, .navbar > .container-xl, .navbar > .container-xxl {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#logo {
+  width: 25%;
+}
+
+@media (max-width: 500px) {
+  #logo {
+    width: 40% !important;
+  }
+}
+
+@media (min-width: 500px) {
+  #logo {
+    width: 20% !important;
+  }
+}
+
+@media (max-width: 992px) {
+  #logo {
+    width: 15%;
+  }
+}
+
 .container-fluid {
   height: 3.2rem;
 }
@@ -750,7 +786,7 @@ h4 {
 .about #about-me {
   color: #a5a5a8;
   background-color: #0a0a0a !important;
-  padding: 1rem 0;
+  padding: 2rem 0;
   text-align: left;
   width: 90%;
   margin-inline: auto;
