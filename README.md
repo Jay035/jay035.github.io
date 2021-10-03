@@ -15,6 +15,9 @@ https://jay035.github.io/CV/
 Calculator
 https://jay035.github.io/Calculator/
 
+3-column-preview-card
+https://jay035.github.io/3-column-preview-card/
+
 Google Homepage task by Zuri
 https://jay035.github.io/Google%20Homepage/
 
