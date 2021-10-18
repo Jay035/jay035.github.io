@@ -1038,46 +1038,71 @@ h4{
         // form 
         form{
           margin-top: 2em;
-        }
 
-        .form-control{
-          background-color: $body;
-          border: none;
-          border-bottom: 2px solid $linkColor;
-          outline: none;
-          box-shadow: none;
-          color: $h4Color;
-        }
-
-        textarea{
-          border-radius: 5px;
-        }
-
-        // input 
-        input{
-          padding-top: 1rem;
-          padding-bottom: .5rem;
-          margin-bottom: 1.4em;
-          color: $h4Color;
-        }
-
-        // send button 
-        button#send{
-          background:  $linkColor;
-          border: none;
-          color: $aColorHover;
-          width: 6rem;
-          padding: .5rem 0;
-          border-radius: 10px;
-          margin-top: 2em;
-          margin-bottom: .5em;
-        
-          // button active state 
-          &:hover, &:active{
-            background: $cvHover;
-            transition: all 0.9s ease 0s;
+          .form-control{
+            background-color: $body;
+            border: none;
+            border-bottom: 2px solid $linkColor;
+            outline: none;
+            box-shadow: none;
+            color: $h4Color;
           }
-        } 
+
+          // input 
+          input{
+            padding-top: 1rem;
+            color: $h4Color;
+          }
+
+          i{
+            position: absolute;
+            padding: 10px;
+          }
+
+          .failure-icon,
+          .error{
+            color: red;
+          }
+
+          .success-icon{
+            color: green;
+          }
+          
+          .error{
+            font-size: 15px;
+            margin-top: 5px;
+            margin-bottom: 1em;
+          }
+
+          .success-icon,
+          .failure-icon{
+            right: 5em;
+            margin-top: 1em;
+            opacity: 0;
+          }
+
+          textarea{
+            border-radius: 5px;
+          }
+
+          // send button 
+          button#send{
+            background:  $linkColor;
+            border: none;
+            color: $aColorHover;
+            width: 6rem;
+            padding: .5rem 0;
+            border-radius: 10px;
+            margin-top: 2em;
+            margin-bottom: .5em;
+          
+            // button active state 
+            &:hover, &:active{
+              background: $cvHover;
+              transition: all 0.9s ease 0s;
+            }
+          } 
+        }
 
         #left{
           display: none;

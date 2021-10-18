@@ -11,15 +11,21 @@
   
 
   <!-- Custom Styles -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="bootstrap5.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="./styles/style.css">
-  <link rel="stylesheet" href="./aos-master/dist/aos.css ">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&family=Open+Sans&family=Roboto:wght@500&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <!-- Material icons  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="bootstrap5.0/css/bootstrap.min.css">
+    <!-- css file  -->
+    <link rel="stylesheet" href="./styles/style.css">
+    <!-- animation -->
+    <link rel="stylesheet" href="./aos-master/dist/aos.css ">
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/30175a4a2d.js" crossorigin="anonymous"></script>
+    <!-- google serif fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&family=Open+Sans&family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
   
 </head>
 
@@ -93,16 +99,39 @@
           <section class="about-you">
             <form id="form" action="https://formspree.io/f/xleabgbj" method="POST" >
               <div class="info">
+                <!-- first name -->
                 <div class="">
-                  <input class="form-control text" placeholder="Your First name"  id="FirstName" name="FirstName">
+                  <input class="form-control text" placeholder="Your First name"  id="firstName" name="FirstName">
+                  <i class="fas fa-exclamation-circle failure-icon"></i>
+                  <i class="far fa-check-circle success-icon"></i>
+                  
+                  <div class="error"></div>
                 </div>
+
+                <!-- last name  -->
                 <div class="">
-                  <input class="form-control text" placeholder="Your Last name"  id="LastName" name="LastName" >
+                  <input class="form-control text" placeholder="Your Last name"  id="lastName" name="LastName" >
+                  <i class="fas fa-exclamation-circle failure-icon"></i>
+                  <i class="far fa-check-circle success-icon"></i>
+                  
+                  <div class="error"></div>
                 </div>
               </div>
-              <input style="display: block;" class="form-control text" placeholder="Your email" id="email" name="email" type="email" >   
-              <textarea name="message" class="form-control text" id="message" rows="2" cols="40" placeholder="Write your Message here"></textarea>
-              <!-- Button trigger modal -->
+              <!-- email -->
+              <div class="">
+                <input style="display: block;" class="form-control text" placeholder="Your email" id="email" name="email" type="email" >   
+                <i class="fas fa-exclamation-circle failure-icon"></i>
+                <i class="far fa-check-circle success-icon"></i>
+                <div class="error"></div>
+              </div>
+              <!-- message textarea  -->
+              <div class="">
+                <textarea name="message" class="form-control text" id="message" rows="2" cols="40" placeholder="Write your Message here"></textarea>
+                <i class="fas fa-exclamation-circle failure-icon"></i>
+                <i class="far fa-check-circle success-icon"></i>
+                <div class="error"></div>
+              </div>
+              <!-- Send button -->
               <button id="send" type="submit"> Send</button>
             </form>
             </section>

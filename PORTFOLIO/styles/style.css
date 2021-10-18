@@ -955,7 +955,7 @@ h4 {
   margin-top: 2em;
 }
 
-.contact .container .form-control {
+.contact .container form .form-control {
   background-color: #0a0a0a !important;
   border: none;
   border-bottom: 2px solid #646468;
@@ -965,18 +965,43 @@ h4 {
   color: #a5a5a8;
 }
 
-.contact .container textarea {
-  border-radius: 5px;
-}
-
-.contact .container input {
+.contact .container form input {
   padding-top: 1rem;
-  padding-bottom: .5rem;
-  margin-bottom: 1.4em;
   color: #a5a5a8;
 }
 
-.contact .container button#send {
+.contact .container form i {
+  position: absolute;
+  padding: 10px;
+}
+
+.contact .container form .failure-icon,
+.contact .container form .error {
+  color: red;
+}
+
+.contact .container form .success-icon {
+  color: green;
+}
+
+.contact .container form .error {
+  font-size: 15px;
+  margin-top: 5px;
+  margin-bottom: 1em;
+}
+
+.contact .container form .success-icon,
+.contact .container form .failure-icon {
+  right: 5em;
+  margin-top: 1em;
+  opacity: 0;
+}
+
+.contact .container form textarea {
+  border-radius: 5px;
+}
+
+.contact .container form button#send {
   background: #646468;
   border: none;
   color: #fff;
@@ -987,7 +1012,7 @@ h4 {
   margin-bottom: .5em;
 }
 
-.contact .container button#send:hover, .contact .container button#send:active {
+.contact .container form button#send:hover, .contact .container form button#send:active {
   background: #505052;
   -webkit-transition: all 0.9s ease 0s;
   transition: all 0.9s ease 0s;
