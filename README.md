@@ -1,8 +1,5 @@
 # LIVE LINKS
 
-Portfoilo website
-https://jay035.github.io/PORTFOLIO/
-
 launch-countdown-timer-main
 https://jay035.github.io/launch-countdown-timer-main/
 
