@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Launch countdown timer</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <section class="loader">
+    <div id="preloader">
+      <span style="--i:1"></span>
+      <span style="--i:2"></span>
+      <span style="--i:3"></span>
+      <span style="--i:4"></span>
+      <span style="--i:5"></span>
+      <span style="--i:6"></span>
+      <span style="--i:7"></span>
+      <span style="--i:8"></span>
+      <span style="--i:9"></span>
+      <span style="--i:10"></span>
+      <span style="--i:11"></span>
+      <span style="--i:12"></span>
+      <span style="--i:13"></span>
+      <span style="--i:14"></span>
+      <span style="--i:15"></span>
+      <span style="--i:16"></span>
+      <span style="--i:17"></span>
+      <span style="--i:18"></span>
+      <span style="--i:19"></span>
+      <span style="--i:20"></span>
+      <!-- <h1>GIVE ME ONE SEC</h1> -->
+    </div>
+  </section>
+
+  <div class="main">
+    <div class="container">
+      <h1>We're launching soon</h1>
+
+      <div class="countdown">
+
+        <!-- days -->
+        <div class="days">
+          <div class="flip">
+            <!-- seconds last digit -->
+            <input type="hidden" />
+            <!-- for tracking d value changes -->
+            <div class="flip-display">
+              <div class="flip-display-top" data-group="days"></div>
+              <div class="flip-display-bottom" data-group="days"></div>
+            </div>
+            <!-- FLIPPER -->
+            <div class="flipper">
+              <div class="flipper-top" data-group="days"></div>
+              <div class="flipper-bottom" data-group="days"></div>
+            </div>
+          </div>
+          <p>Day(s)</p>
+        </div>
+        
+        <!-- hours -->
+        <div class="hours">
+          <div class="flip">
+            <!-- seconds last digit -->
+            <input type="hidden" />
+            <!-- for tracking d value changes -->
+            <div class="flip-display">
+              <div class="flip-display-top" data-group="hours"></div>
+              <div class="flip-display-bottom" data-group="hours"></div>
+            </div>
+            <!-- FLIPPER -->
+            <div class="flipper">
+              <div class="flipper-top" data-group="hours"></div>
+              <div class="flipper-bottom" data-group="hours"></div>
+            </div>
+          </div>
+          <p>Hour(s)</p>
+        </div>
+
+        <!-- minutes -->
+        <div class="minutes">
+          <div class="flip">
+            <!-- seconds last digit -->
+            <input type="hidden" />
+            <!-- for tracking d value changes -->
+            <div class="flip-display">
+              <div class="flip-display-top" data-group="minutes"></div>
+              <div class="flip-display-bottom" data-group="minutes"></div>
+            </div>
+            <!-- FLIPPER -->
+            <div class="flipper">
+              <div class="flipper-top" data-group="minutes"></div>
+              <div class="flipper-bottom" data-group="minutes"></div>
+            </div>
+          </div>
+          <p>Minute(s)</p>
+        </div>
+
+        <!-- seconds -->
+        <div class="seconds">
+          <div class="flip play">
+            <!-- seconds last digit -->
+            <input type="hidden" />
+            <!-- for tracking d value changes -->
+            <div class="flip-display">
+              <div class="flip-display-top" data-group="seconds"></div>
+              <div class="flip-display-bottom" data-group="seconds"></div>
+            </div>
+            <!-- FLIPPER -->
+            <div class="flipper">
+              <div class="flipper-top" data-group="seconds"></div>
+              <div class="flipper-bottom" data-group="seconds"></div>
+            </div>
+          </div>
+          <p>Second(s)</p>
+        </div>
+      </div>
+    </div>
+      <div class="socials">
+        <ul>
+          <li><img src="./images/icon-facebook.svg" alt="icon-facebook"></li>
+          <li><img src="./images/icon-pinterest.svg" alt="icon-pinterest"></li>
+          <li><img src="./images/icon-instagram.svg" alt="icon-instagram"></li>
+        </ul>
+      </div>
+
+      <div class="hills">
+        <img src="./images/pattern-hills.svg" alt="pattern-hills">
+      </div>
+      
+      <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="https://www.frontendmentor.io/profile/Jay035" target="_blank">CodexJay</a>.
+      </div>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+</html>

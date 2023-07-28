@@ -5,9 +5,10 @@ body{
     word-spacing: 2px;
 }
 header{
-    background-color: rgb(150, 85, 36);
+    background-color: #2e3d60;
     color: white;
-    padding: .5rem ;
+    padding: 1rem ;
+    text-align: center;
 }
 nav,.body{
     animation: fadeIn 3s ease-in-out;
@@ -24,7 +25,7 @@ nav,.body{
 }
 
 h1{
-    padding:.5rem 0 0 .7rem;
+    padding:0 0 0 .7rem;
     font-weight: bolder;
     font-size: 25px;
     font-family: 'Playfair Display', serif;
@@ -35,10 +36,8 @@ h2{
 
 .info{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
-    flex-basis: 50%;
-    margin-left:0 ;
     color: #fff;
 }
 .top-info{
@@ -62,6 +61,9 @@ a{
     text-decoration: none;
     cursor: pointer;
 }
+a:hover{
+    text-decoration: underline;
+}
 [class="fa fa-phone"]{
     margin-left: -1.9em;
     margin-right: -1em;
@@ -74,10 +76,10 @@ a{
     margin: 1.5em;
 }
 .header > span{
-    color: rgb(150, 85, 36);
+    color: #2e3d60;
 }
 hr{
-    color: rgb(150, 85, 36);
+    color: #2e3d60;
 }
 h4{
     font-weight: normal;
@@ -126,7 +128,7 @@ p{
         width: 50%;
         border: 1px solid #fff;
         background-color: #fff;
-        color: rgb(150, 85, 36);
+        color: #2e3d60;
         text-align: center!important;
         padding: .7rem;
         margin:-3em auto;

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="login.css">
+    <script src="login.js"></script>
+    <title>login page</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="left-side">
+            <div class="logo">
+                <img src="login/Hygia+.png" alt="hygia+ img" id="left-img" />
+            </div>
+            <h2>Welcome Back</h2>
+            <form>
+                <div>
+                    <input type="email" name="email" class="box" placeholder="Enter Address">
+                </div>
+                <div style="position: relative;">
+                    <span class="p-viewer" onclick="showPassword()">
+                        <i class="fa fa-eye" id="see-icon" aria-hidden="true"></i>
+                        </span>
+                    <input type="password" id="pass" name="password" class="box" placeholder="Enter password">
+                </div>
+            </form>
+            <label><input type="checkbox" name="">Keep me signed in  
+                    <a href="forgot-password.html"><strong>forget password?</strong></a>
+                </label>
+            <button>Log in</button>
+            <p>Don't have an account yet?
+                <a href="#"> <strong>Sign up</strong></a>
+            </p>
+        </div>
+        <div class="right-side">
+            <img src="login/right img.png" alt="image of a health pratritioner" id="right-img" />
+
+        </div>
+    </div>
+</body>
+
+</html>

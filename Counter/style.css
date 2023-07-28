@@ -1,0 +1,44 @@
+body{
+    background-color: #f1f5f8;
+    padding: 150px 0;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+h1,
+h2{
+    color: #131f2b;
+}
+
+h1{
+    font-size: 50px;
+}
+
+h2{
+    font-size: 30px;
+}
+
+.btn{
+    width: 43%;
+}
+
+button{
+    border: 2px solid #131f2b;
+    border-radius: 7px;
+    padding: .5rem .8rem;
+    text-transform: uppercase;
+    margin: 0 .5em 1em 0;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #131f2b;
+    color: #ffffff;
+}
+

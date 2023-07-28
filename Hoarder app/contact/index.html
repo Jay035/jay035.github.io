@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="contact.css">
+    <title>Contact page</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav id="nav">
+            <img src="../img/Group 428.png" alt="">
+            <ul id="navLinks">
+               <li class="nav-item"><a href="#">Home</a></li>
+               <li class="nav-item"><a href="#About">About</a></li>
+               <li class="nav-item"><a href="#Contact">Contact</a></li>
+               <li class="nav-item"><a href="#FAQ">FAQ</a></li>
+               <button class="download"><a href="#"> DOWNLOAD APP</a></button>
+            </ul>
+               <button id="desktop-btn" class="download"><a href="#"> DOWNLOAD APP</a></button>
+            
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    
+    <!-- Showcase -->
+    <section class="showcase">
+        <div class="container grid">
+            <div class="showcase-text">
+                <h2>YOU CAN ALWAYS 
+                    HAVE US ON SPEED 
+                    DIAL</h2>
+                <p>We are happy to answer all your questions or enquiries. 
+                    feel free to say <span>HELLO!</span></p>  
+            </div>
+
+             <div class="gallery-container">
+                <div class="img-gallery">
+                    <div class="gallery-item gallery-item-1">
+                        <img src="../img/item3.png" class="gallery-img" alt="Image 1">
+                    </div>
+                    <div class="gallery-item gallery-item-2">
+                        <img src="../img/item1.png" class="gallery-img" alt="Image 2">
+                    </div>
+                    <div class="gallery-item gallery-item-3">
+                        <img src="../img/item2.png" class="gallery-img" alt="Image 3">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+   <section class="contact" style="margin-top: 70px;">
+        <div class="container grid">
+            <div class="center" style="margin-bottom: 70px;">
+                <h2>Contact Information</h2>
+                <div class="box">
+                    <h5>Support</h5>
+                    <p><i class="fa fa-phone" aria-hidden="true"></i> <span style="margin-left: 8px;">+234 9045237869</span</p>
+                </div>
+                <div class="box">
+                    <h5>Email</h5>
+                   <a href=""> <p><i class="fa fa-envelope-o" aria-hidden="true"></i>  <span style="margin-left: 8px;">support@hoardr.com</span></p></a>
+                </div>
+            </div>
+
+            <div class="showcase-form card" style="height: 500px">
+                <h2>For complaints</h2>
+    
+                <form>
+                    <div class="form-control">
+                        <input type="text" name="name" placeholder="Full name" required>
+                    </div>
+                    <div class="form-control">
+                        <input type="email" name="company" placeholder="Email address" required>
+                    </div>
+                    <div class="form-control">
+                        <input type="text" name="email" placeholder="Phone number" required>
+                    </div>
+                    <div class="form-control">
+                        <textarea  id="text-area" required placeholder="Enter complaints here"></textarea> 
+                    </div>
+                    <input type="submit" value="send message" class="btn">
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <section class="subs">
+            <h5 class="subscribe">Subscribe</h5>
+            <br>
+            <div class="email-btn">
+                <input type="email" placeholder="Enter your email address here">
+                <button>SUBSCRIBE</button>
+            </div>
+        </section>
+        <section class="desktop-com">
+            <h4>COMPANY</h4>
+            <nav class="nav-footer">
+                <a href="#"> About</a>
+                <a href="#"> Contact</a>
+                <a href="#"> FAQ</a>
+            </nav>
+        </section>
+
+        <section class="desktop-com">
+            <h4>GET IN TOUCH</h4>
+            <nav class="nav-footer">
+                <h4> Partnership and enquiries</h4>
+                <a href="#"> support@hoadr.com</a>
+                <div class="socials">
+                <a href="#"> <img class="twitter" src="../img/twitter.png" alt=""></a>
+                <a href=""> <img class="fb" src="../img/facebook.png" alt=""></a>
+                <a href=""> <img class="ig" src="../img/ig.png" alt=""></a>
+                </div>
+            </nav>
+        </section>
+        <section id="bottom-mobile">
+            <section class="com">
+                <h4>COMPANY</h4>
+                <nav class="nav-footer">
+                    <a href="#"> About</a>
+                    <a href="#"> Contact</a>
+                    <a href="#"> FAQ</a>
+                </nav>
+            </section>
+    
+            <section class="com">
+                <h4>GET IN TOUCH</h4>
+                <nav class="nav-footer">
+                    <h4> Partnership and enquiries</h4>
+                    <a href="#"> support@hoadr.com</a>
+                    <div class="socials">
+                    <a href="#"> <img class="twitter" src="../img/twitter.png" alt=""></a>
+                    <a href=""> <img class="fb" src="../img/facebook.png" alt=""></a>
+                    <a href=""> <img class="ig" src="../img/ig.png" alt=""></a>
+                    </div>
+                </nav>
+            </section>
+    </section>
+        <div id="mobile-socials" class="socials">
+            <a href="#"> <img class="twitter" src="../img/twitter.png" alt=""></a>
+            <a href=""> <img class="fb" src="../img/facebook.png" alt=""></a>
+            <a href=""> <img class="ig" src="../img/ig.png" alt=""></a>
+         </div>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.getElementById('navLinks');
+
+        hamburger.addEventListener('click', mobileMenu);
+
+        function mobileMenu(){
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        }
+    </script>
+     
+</body>
+</html>

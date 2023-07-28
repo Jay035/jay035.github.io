@@ -1,0 +1,382 @@
+/* variables */
+:root{
+    --flip-height: 80px;
+    --flip-width: calc(var(--flip-height) * 0.9);
+    --line-height: calc(var(--flip-height) * 0.5);
+    --animation-time: 1s;
+    --animation-ease: linear;
+    --perspective: 200px;
+    --textColor: hsl(237, 18%, 59%);
+    --countdown-text: hsl(345, 95%, 68%);
+    --body: hsl(235, 16%, 14%);
+    --countdown-bg: hsl(236, 21%, 26%);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Red Hat Text', sans-serif;
+}
+
+body{
+    text-transform: uppercase;
+    color: hsl(0, 0%, 100%);
+    background: var(--body) no-repeat;
+    text-align: center;
+    overflow: hidden;
+    line-height: 1.2;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style-type: none;
+}
+
+body::after{
+    content: '';
+    background-image: url('./images/bg-stars.svg');
+    height: 70vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* preloader */
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #211d2b;
+    animation: animate 10s linear infinite ;
+}
+
+@keyframes animate{
+    0%{
+        filter: hue-rotate(0deg);
+    }
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
+
+#preloader{
+    position: relative;
+    width: 120px;
+    height:120px;
+}
+
+#preloader span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:100%;
+    transform: rotate(calc(18deg * var(--i)));
+}
+
+#preloader span::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15px;
+    height:15px;
+    border-radius: 50%;
+    background: #30243a;
+    box-shadow: 0 0 10px #302,
+                0 0 20px #302,
+                0 0 40px #302,
+                0 0 60px #302,
+                0 0 80px #302,
+                0 0 100px #302;
+    animation: spin 2s linear infinite;
+    animation-delay: calc(0.1s * var(--i));
+}
+
+@keyframes spin{
+    0%{
+        transform: scale(1);
+    }
+    80%,100%{
+        transform: scale(0);
+    }
+}
+
+
+/* container */
+.main{
+    display: none;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: min(90%, 1000px);
+    margin-inline: auto;
+    padding: 8rem 0 0 ;
+    letter-spacing: 1.6px;
+}
+
+.container h1{
+    font-size: 1.875rem;
+    margin-bottom: 1.5em;
+}
+
+/* countdown */
+.countdown{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* .countdown div{
+    margin: 1em .5em;
+} */
+
+
+.countdown p{
+    color: var(--textColor);
+    letter-spacing: 1.6px;
+    margin-top: 1rem;
+    text-align: center;
+    /* margin-inline: 1em; */
+}
+
+.flip{
+    height: var(--flip-height);
+    width: var(--flip-width);
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: calc(var(--flip-height) * 0.5); 
+    /* half d size of d flip height */
+    position: relative;
+    margin: 0 12px;
+    overflow: hidden;
+    background-color: var(--countdown-bg);
+}
+
+.flip-display{
+    height: var(--flip-height);
+    width: var(--flip-width);
+    display: flex;
+    flex-direction: column;
+}
+
+.flip-display-top,
+.flip-display-bottom{
+    position: relative;
+    text-align: center;
+    width: 100%;
+    overflow: hidden;
+    color: var(--countdown-text);
+    height: calc(var(--flip-height) * 0.5); /* half d size of d flip height */
+    line-height: calc(var(--line-height) * var(--i)); /* i property is defined later */
+}
+
+.flip-display-top{
+    /* based on --i, we will align d line height */
+    --i: 2;
+}
+
+.flip-display-top::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 90%;
+    width: 100%;
+    height: 30%;
+    background-color: rgba(35, 36, 53, .5);
+    border: 1px solid rgba(46, 47, 72, 0.07);
+    border-style: inset;
+}
+
+.flip-display-bottom::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -10%;
+    width: 100%;
+    height: 20%;
+    background-color: rgba(35, 36, 53, .5);
+    border: 1px solid rgba(46, 47, 72, 0.07);
+    border-style: inset;
+}
+
+.flip-display-bottom{
+    --i: -2;
+}
+
+.flipper{
+    /* this is positioned on top of d flip display so that d are stacked upon one another */
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: var(--flip-height);
+    width: var(--flip-width);
+    perspective: var(--perspective);
+}
+
+.flipper-top,
+.flipper-bottom{
+    position: absolute;
+    left: -10%;  /*using negative % for better alignment */
+    right: -10%;
+    margin: auto;
+    text-align: center;
+    /* set d height of d element to half d height of d flipper */
+    height: calc(var(--flip-height) * 0.5);
+    line-height: calc(var(--line-height) * var(--i));
+    overflow: hidden;
+    background-color: hsl(236, 22%, 14%);
+    color: var(--countdown-text);
+    z-index: 9999999;
+}
+
+/* now, we need to align d flipper line height to match with d flip display line height, by adding bg colors */
+.flipper-top{
+    --i: 2;
+    top: 0;
+    transform: rotateX(0deg);
+    transform-origin: bottom;
+}
+
+/* .flipper-top::before,
+.flipper-top::after{
+    content: '';
+} */
+
+.flipper-bottom{
+    --i: -2;
+    transform: rotateX(90deg);
+    transform-origin: top;
+    bottom: 0;
+}
+
+.flip.play .flipper-top{
+    /* animate d flipper top */
+    animation: flipperTopAnimation var(--animation-ease) var(--animation-time) infinite;
+}
+
+.flip.play .flipper-bottom{
+    /* animate d flipper bottom */
+    animation: flipperBottomAnimation var(--animation-ease) var(--animation-time) infinite;
+}
+
+@keyframes flipperTopAnimation {
+    0%{
+        transform: rotateX(0deg);
+    }
+    50%,
+    100%{
+        transform: rotateX(-90deg);
+    }
+}
+
+@keyframes flipperBottomAnimation {
+    0%,
+    50%{
+        transform: rotateX(90deg);
+    }
+    100%{
+        transform: rotateX(0deg);
+    }
+}
+
+.socials, .attribution{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+}
+
+/* social media */
+.socials{
+    bottom: 4em;
+}
+
+.socials ul{
+    display: flex;
+}
+
+/* social media icons */
+.socials ul li{
+    margin-inline: 20px;
+    cursor: pointer;
+}
+
+.socials ul li img:hover{
+    filter: drop-shadow(0px 4px hsl(345, 95%, 68%));
+    -webkit-filter: drop-shadow(0px 4px hsl(345, 95%, 68%));
+}
+
+/* footer-img */
+.hills{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 10rem;
+    overflow: hidden;
+}
+
+.attribution { 
+    bottom: 1em;
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+.attribution a:hover { 
+    color: hsl(345, 95%, 68%); 
+}
+
+@media (min-width:768px){
+    .container{
+        padding: 10rem 0 0;
+    }
+
+    .flip{
+        width: calc(var(--flip-width) * 1.2);
+        font-size: calc(var(--flip-height) * 0.6); 
+    }
+
+    .flip-display{
+        width: calc(var(--flip-width) * 1.2);
+        font-size: calc(var(--flip-height) * 0.6); 
+    }
+    
+    .socials{
+        bottom: 5em;
+    }
+
+    .attribution {
+        font-size: 1.2rem;
+    }
+}
+
+@media (min-width:1440px){
+    .body::after, 
+    .hills img{
+        width: 1600px;
+    }
+    .socials{
+        bottom: 5em;
+    }
+}
+
+@media (min-width:1600px){
+    .body::after, 
+    .hills img{
+        width: 1920px;
+    }
+}

@@ -1,0 +1,429 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;900&display=swap');  
+*/
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  line-height: 1.6;
+  font-family: 'Mulish', sans-serif;
+  color: #484858;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #484858;
+}
+.wrapper{
+    width: 86%;
+    margin: 0 auto;
+}
+
+/* Nav */
+
+header {
+    width: 100%;
+    height: 16vh;
+}
+nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow-x: hidden;
+  left: 0;
+  top: 0;
+  margin-top: 40px;
+  width: 100%;
+  z-index: 1;
+}
+
+nav img{
+  width: 15%;
+}
+#navLinks{
+    display: flex;
+    justify-content: space-between;
+    transition: 0.3s;
+}
+#navLinks a{
+    font-size: 0.95rem;
+    letter-spacing: 2px;
+    text-align: center;
+    text-transform: capitalize;
+}
+#navLinks button{
+    display: none;
+}
+
+.nav-item{
+    margin: 1.5rem;
+}
+.hamburger{
+    display: none;
+}
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #101010;
+}
+.download {
+    background-color: #000000;
+    color: #fff;
+    border-radius: 4px;
+    padding: 16px 17px;
+    border: none;
+    transition: all 0.3s ease 0s;
+}
+.download a{
+    color: #fff;
+}
+
+.download:hover {
+    background-color: #ff3c78; 
+    transition: all 0.3s ease 0s;
+    color: #fff;
+    transform: scale(0.98);
+}
+  
+
+/* Main section  */
+main{
+    font-size: 15px;
+}
+main h2{
+    text-align: center;
+    padding-bottom: 1rem;
+    font-weight: 550;
+    color: #4B4B58;
+}
+h3,span{
+    font-weight: bold;
+    opacity: 0.9;
+    color: #4B4B58;;
+}
+main > div{
+    margin-bottom: 2em;
+}
+main a{
+    font-weight: bold;
+    opacity: 0.85;
+}
+span{
+    font-weight: 550;
+}
+
+
+/* footer */
+footer{
+    display: grid;
+    grid-template-columns: 40% 30% 30%;
+    grid-gap: 20px;
+    padding-bottom: 5rem;
+}
+footer section:first-child input{
+    border: 1px solid #818195;
+    padding: 14px 10px;
+    outline: none; 
+    font-size: 14px;
+    font-weight: normal;
+    width: 250px;
+    border-radius: 3px 0px 0px 3px;
+}
+footer a{
+    font-weight: normal;
+    color: #000;
+}
+footer .nav-footer{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 0;
+    width: 70%;
+}
+footer section nav a:hover{
+    color: #ff3c78;
+}
+footer section:first-child button{
+    background-color:#4B4B58;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px 20px;
+    border: 2px solid #4B4B58;
+    outline: none;
+    cursor: pointer;
+    border-radius: 0px 3px 3px 0px;
+}
+footer section:first-child div.email-btn{
+    display: flex;
+    justify-content: left;
+}
+footer section:first-child button:hover{
+    background-color: #ff3c78; 
+    transition: all 0.3s ease 0s;
+    border: 2px solid #ff3c78;
+   
+}
+footer section h4{
+    margin-bottom: 1em;
+    cursor: default;
+    color: #4B4B58;
+    font-size: 15px;
+    font-weight: 800;
+}
+.subscribe{
+    font-size: 18px;
+    font-weight: bold;
+    color: #4B4B58;
+}
+footer .subs{
+    width: 100%;
+    text-align: left;
+    padding-bottom: 1rem;
+}
+#company .nav-footer > div{
+    display: grid;
+    grid-template-columns: 30% auto;
+    grid-gap: 30px;
+    align-items: center;
+    text-align: left;
+    width: 100%;
+}
+#company .nav-footer > div a{
+    padding-bottom: .4em;
+}
+.light-font{
+    font-weight: lighter;
+    margin: 0 0 .3em;
+    opacity: 0.7;
+}
+.support-link{
+    font-weight: bold;
+}
+.email-btn{
+    margin-top: -30px;
+}
+.socials{
+    display: flex;
+    justify-content: space-between;
+}
+.socials img{
+    border: solid;
+    padding: 0.5em;
+    background: #E4E4E9;
+    border-radius: 50%;
+    border: none;
+    margin: 8px 6px;
+    width: 35%;
+}
+
+
+
+#bottom-mobile,#mobile-socials{
+    display: none;
+}
+
+
+/* Ipad screen size and below */
+@media (max-width:900px){
+    .wrapper{
+        width: 90%;
+    }
+    /* Nav */
+    header {
+        width: 100%;
+        height: 10vh;
+    }
+    #navLinks{
+        padding-bottom: 3rem;
+        position: absolute;
+        left: -112%;
+        top: 4.5rem;
+        min-width: 100%;
+        text-align: center;
+        justify-content: space-between;
+        flex-direction: column;
+        background: rgba(15, 20, 35, 0.99);
+        z-index: 9999;
+    }
+    nav li{
+        padding: 1rem;
+    }
+    
+    #navLinks a{
+        color: white;
+        width: 100%;
+        transition: color 1s ease, padding 1s ease, background-color 1s ease;
+        font-size: 1.10rem;
+    }
+    nav li:hover{
+        background: rgba(104, 120, 126, 0.2);
+      }
+    nav li a:hover{
+        color: #B1D4E0;
+        padding-left: 30px;
+    }
+    .nav-item{
+        margin: 0;
+    }
+    #navLinks.active {
+        left: -2em;
+    }
+    nav button.download{
+        display: block!important;
+        width: 27%;
+        margin: .8em auto 0;
+    }
+    .hamburger{
+        display: block;
+        margin-right: 1em;
+        cursor: pointer;
+      }
+    #desktop-btn{
+        display: none!important;
+    }
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+        
+    }
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+        background-color: #ff3c78;
+    }
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+        background-color: #ff3c78;
+    }
+    .download {
+        background-color: #212121!important;
+    }
+
+    /* Main */
+    h2{
+        font-size: 1.2em;
+        width: 100%;
+    }
+
+    /* Footer */
+    footer {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-areas: 
+            "left left center center"
+            " right auto auto auto";
+        grid-gap: 20px;
+    }
+    footer .nav-footer{
+        width: 100%;
+    }
+    .subs{
+        grid-area: left;
+    }
+    #company{
+        grid-area: center;
+        margin-left: -2em;
+    }
+    #company .nav-footer > div{
+        display: grid;
+        grid-template-columns: 30% auto;
+        grid-gap: 10px;
+        align-items: center;
+        text-align: left;
+    }
+    div.left a{
+        padding-bottom: .9rem!important;
+    }
+    #getInTouch{
+        grid-area: right;
+    }
+    .socials{
+        display: none;
+    }
+    #mobile-socials{
+        display: flex;
+        justify-content: center;
+        width: 200%;
+        margin: 1em auto;
+    }
+    .socials img{
+        width: 40%;
+    }
+}
+
+/* Mobile screen:500px and below*/
+@media (max-width:500px){
+    /* Nav */
+    header nav img{
+        width: 40%;   
+    }
+    #navLinks{
+        padding-bottom: 3rem;
+        position: absolute;
+        left: -112%;
+        top: 4.5rem;
+        width: 100.5%;
+        text-align: center;
+        justify-content: space-between;
+        flex-direction: column;
+        background: rgba(15, 20, 35, 0.99);
+        z-index: 9999;
+        
+    }
+    nav button.download{
+        display: block!important;
+        width: 57%;
+        margin: .8em auto 0;
+    }
+
+    /* Main */
+    h2{
+        font-size: 1.1em;
+        width: 100%;
+    }
+
+    /* Footer */
+    footer{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .desktop-com{
+        display: none;
+    }
+    #bottom-mobile{
+        display: block;
+    }
+    .subscribe{
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+    #bottom-mobile .com .nav-footer{
+        display: flex!important;
+    }
+    #bottom-mobile #company{
+        margin-left: .5em;
+    }
+    #company .nav-footer > div {
+        display: grid;
+        grid-template-columns: 40% auto;
+        padding-bottom: .4rem;
+    }
+    
+    #bottom-mobile .com .nav-footer a{
+        width: 100%;
+    }
+      
+}
+
